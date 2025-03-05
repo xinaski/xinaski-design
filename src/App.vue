@@ -1,14 +1,12 @@
 <script setup>
   import Navbar from './components/Navbar.vue';
-  import Footer from './components/Footer.vue';
+import Drawer from './components/drawer.vue';
 </script>
 
 <template>
   <Navbar />
+  <Drawer />
   <router-view />
-  <Footer />
-
-
 </template>
 
 
