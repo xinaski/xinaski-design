@@ -1,11 +1,11 @@
 <script setup>
   import { useI18n } from 'vue-i18n';
 
-  // Funció per canviar l'idioma
+  // change language
   const { locale } = useI18n();
 
   function changeLanguage(language) {
-    locale.value = language;  // Actualitza l'idioma
+    locale.value = language;  // upload language
   }
 
 </script>

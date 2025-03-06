@@ -21,35 +21,35 @@
       <a type="button" href="#home" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
         class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
         <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          # HELLO
+          # {{ $t('navbar.home-title') }}
         </span>
       </a>
       <hr class="w-10 border-1 ml-6">
       <a type="button" href="#about" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
         class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
         <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #2 ABOUT ME<span class="text-gray-400 pl-2">How I am?</span>
+          #2 {{ $t('navbar.about-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.about-subtitle') }}</span>
         </span>
       </a>
       <hr class="w-10 border-1 ml-6">
       <a type="button" href="#portfolio" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
         class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
         <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #3 PORTFILO<span class="text-gray-400 pl-2">What did I do?</span>
+          #3 {{ $t('navbar.portfolio-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.portfolio-subtitle') }}</span>
         </span>
       </a>
       <hr class="w-10 border-1 ml-6">
       <a type="button" href="#customers" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
         class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
         <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #4 CUSTOMERS<span class="text-gray-400 pl-2">Who did I work for?</span>
+          #4 {{ $t('navbar.customers-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.customers-subtitle') }}</span>
         </span>
       </a>
       <hr class="w-10 border-1 ml-6">
       <a type="button" href="#skills" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
         class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
         <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #5 SKILLS<span class="text-gray-400 pl-2">What is going on?</span>
+          #5 {{ $t('navbar.skills-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.skills-subtitle') }}</span>
         </span>
       </a>
     </div>

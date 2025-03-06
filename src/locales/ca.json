@@ -1,5 +1,44 @@
 {
-  "hello": "Hola",
-  "greeting": "Benvingut al meu lloc web!",
-  "viewSite": "Veure lloc"
+  "navbar": {
+    "home-title": "Hola",
+    "home-subtitle": "",
+    "about-title": "Sobre mi",
+    "about-subtitle": "Qui sóc?",
+    "portfolio-title": "Portfolio",
+    "portfolio-subtitle": "Què he fet?",
+    "customers-title": "Clients",
+    "customers-subtitle": "Per a quí he treballat?",
+    "skills-title": "Habilitats",
+    "skills-subtitle": "Què he utilitzat?"
+  },
+  "home": {
+    "welcome": "",
+    "description": "Disseny UX/UI, prototips i desenvolupament frontend."
+  },
+  "about": {
+    "description01": "El meu nom és Marc Zamora, nascut el 1976 a Barcelona. Actualment visc a Mataró (BCN).",
+    "description02": "Apassionat per les arts visuals i la comunicació, vaig decidir fusionar aquests dos camps del meu interès i especialitzar-me en el disseny gràfic com a forma de comunicació visual.",
+    "description03": "En els darrers anys, m'he centrat en el món en línia: disseny, aplicacions mòbils, campanyes de bàners, disseny d'interfícies.",
+    "description04": "M’interessen molt les tècniques i metodologies UX, i normalment treballo amb Vue per al desenvolupament frontend.",
+    "description05": "M'encanta el cafè.",
+    "cta-01": "No dubtis a saludar-me per",
+    "cta-email": "correu electrònic",
+    "cta-02": "A més, pots descarregar el meu CV",
+    "cta-cv": "aquí"
+  },
+  "portfolio": {
+  },
+  "customers": {
+  },
+  "skills": {
+    "skills-01": "Frontend",
+    "skills-02": "Parsers i Processadors",
+    "skills-03": "Marcat i transport",
+    "skills-04": "Eines de disseny",
+    "skills-05": "Experiència en UX/UI, eines de maquetació"
+  },
+  "contact": {
+    "title": "Contacte",
+    "description": "Si vols posar-te en contacte amb mi, omple el formulari."
+  }
 }

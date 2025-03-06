@@ -1,5 +1,44 @@
 {
-  "hello": "Hello",
-  "greeting": "Welcome to my website!",
-  "viewSite": "View Site"
+  "navbar": {
+    "home-title": "Hello",
+    "home-subtitle": "",
+    "about-title": "About me",
+    "about-subtitle": "Who am I?",
+    "portfolio-title": "Portfolio",
+    "portfolio-subtitle": "What have I done?",
+    "customers-title": "Clients",
+    "customers-subtitle": "Who have I worked for?",
+    "skills-title": "Skills",
+    "skills-subtitle": "What have I used?"
+  },
+  "home": {
+    "welcome": "I make awesome designs",
+    "description": "UX/UI design, Prototypes & frontend development."
+  },
+  "about": {
+    "description01": "My name is Marc Zamora, born in 1976 in Barcelona. I currently live in Mataró (BCN).",
+    "description02": "Always passionate about the visual arts and communication I decided to merge these two fields of my interest and specialize in graphic design as a form of visual communication.",
+    "description03": "In recent years I have focused my work in the online world: design, mobile apps, banner campaigns, interface design.",
+    "description04": "I’m really interested in UX techniques and methodologies, and I usually deal with Vue for my frontend development.",
+    "description05": "I love coffee.",
+    "cta-01": "Feel free to say hello via",
+    "cta-email": "Email",
+    "cta-02": "Also, you can download my CV",
+    "cta-cv": "here"
+  },
+  "portfolio": {
+  },
+  "customers": {
+  },
+  "skills": {
+    "skills-01": "Frontend",
+    "skills-02": "Parsers and Processors",
+    "skills-03": "Markup and transport",
+    "skills-04": "Design tools",
+    "skills-05": "Experience in UX/UI, mockup tools"
+  },
+  "contact": {
+    "title": "Contacte",
+    "description": "Si vols posar-te en contacte amb mi, omple el formulari."
+  }
 }

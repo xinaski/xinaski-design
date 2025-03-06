@@ -26,7 +26,7 @@ onMounted(async () => {
           <div class="w-full space-y-4 lg:space-y-10">
             <div class="pb-8">
               <p class="inline-block mb-4 text-xs font-bold text-black uppercase font-stretch-extra-expanded">
-                #{{ $t('hello') }}
+                # {{ $t('navbar.home-title') }}
               </p>
               <hr class="w-10 border-1">
             </div>
@@ -34,7 +34,7 @@ onMounted(async () => {
               I make <span class="text-yellow-300">awesome</span> designs
             </h2>
             <p class="text-lg text-black md:text-2xl font-stretch-expanded">
-              UX/UI design, Prototypes & frontend development.
+              {{ $t('home.description') }}
             </p>
           </div>
         </div>
@@ -52,38 +52,39 @@ onMounted(async () => {
           <div class="w-full md:w-4/6 space-y-4 md:pr-16 lg:pr-0">
             <div class="pb-8">
               <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-                #2 ABOUT ME<span class="text-gray-400 pl-2">How I am?</span>
+                #2 {{ $t('navbar.about-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.about-subtitle') }}</span>
               </p>
               <hr class="w-10 border-1">
             </div>
             <div class="space-y-3 font-stretch-expanded text-sm">
               <p class="text-gray-600">
-                My name is <strong class="text-gray-900">Marc Zamora</strong>, born in 1976 in Barcelona. I currently live in Mataró (BCN).
+                {{ $t('about.description01') }}
               </p>
               <p class="text-gray-900">
-                Always passionate about the <strong class="text-gray-900">visual arts</strong class="text-gray-900"> and <strong class="text-gray-900">communication</strong> 
-                I decided to merge these two fields of my interest and specialize in graphic design as a form of visual communication.
+                {{ $t('about.description02') }}
               </p>
               <p class="text-gray-900">
-                In recent years I have focused my work in the online world: <strong class="text-gray-900">design</strong>, <strong class="text-gray-900">mobile apps</strong>, <strong class="text-gray-900">banner campaigns</strong>, <strong class="text-gray-900">interface design</strong>.
+                {{ $t('about.description03') }}
               </p>
               <p class="text-gray-900">
-                I’m really interested in <strong class="text-gray-900">UX</strong> techniques and methodologies, and I usually deal with Vue for my <strong class="text-gray-900">frontend development</strong>.
+                {{ $t('about.description04') }}
               </p>
               <p class="text-gray-900">
-                I love <strong class="text-gray-900">coffee</strong>.
+                {{ $t('about.description05') }}
               </p>
             </div>
             <div class="space-y-1 pt-8">
               <p class="text-lg text-gray-950 font-stretch-expanded">
-                Feel free to say hello via 
+                {{ $t('about.cta-01') }}
                 <a class="text-yellow-300 font-bold" href="mailto:xinasking@gmail.com">
-                  Email
+                  {{ $t('about.cta-email') }}
                 </a>
               </p>
               <p class="text-lg text-gray-950 font-stretch-expanded">
-                Also, you can download my CV 
-                <a class="text-yellow-300 font-bold" href="">here</a>
+                {{ $t('about.cta-02') }}
+                <a class="text-yellow-300 font-bold" href="">
+                  {{ $t('about.cta-cv') }}
+                </a>
               </p>
             </div>
           </div>
@@ -98,7 +99,7 @@ onMounted(async () => {
         <div class="w-full mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
           <div class="pb-16">
             <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-              #3 PORTFILO<span class="text-gray-400 pl-2">What did I do?</span>
+              #3 {{ $t('navbar.portfolio-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.portfolio-subtitle') }}</span>
             </p>
             <hr class="w-10 border-1">
           </div>
@@ -136,7 +137,7 @@ onMounted(async () => {
       <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
         <div class="pb-10">
           <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-            #4 CUSTOMERS<span class="text-gray-400 pl-2">Who did I work for?</span>
+            #4 {{ $t('navbar.customers-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.customers-subtitle') }}</span>
           </p>
           <hr class="w-10 border-1">
         </div>
@@ -159,14 +160,14 @@ onMounted(async () => {
       <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
         <div class="pb-10">
           <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-            #5 SKILLS<span class="text-gray-400 pl-2">What is going on?</span>
+            #5 {{ $t('navbar.skills-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.skills-subtitle') }}</span>
           </p>
           <hr class="w-10 border-1">
         </div>
         <div class="max-w-screen-xl sm:mx-auto space-y-12">
           <div class="space-y-4">
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              Frontend
+              {{ $t('skills.skills-01') }}
             </h6>
             <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/frontend/html5.svg" class="h-12"/>
@@ -187,7 +188,7 @@ onMounted(async () => {
           </div>
           <div class="space-y-4">
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              Parsers and Processors
+              {{ $t('skills.skills-02') }}
             </h6>
             <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/parsers/haml.svg" class="h-12"/>
@@ -199,7 +200,7 @@ onMounted(async () => {
           </div>
           <div class="space-y-4">
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              Markup and transport
+              {{ $t('skills.skills-03') }}
             </h6>
             <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/markup/xml-file.svg" class="h-12"/>
@@ -208,7 +209,7 @@ onMounted(async () => {
           </div>
           <div class="space-y-4">
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              Design tools
+              {{ $t('skills.skills-04') }}
             </h6>
             <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/designtools/photoshop.svg" class="h-12"/>
@@ -222,7 +223,7 @@ onMounted(async () => {
           </div>
           <div class="space-y-4">
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              Experience in UX/UI, mockup tools
+              {{ $t('skills.skills-05') }}
             </h6>
             <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/mockuptools/figma.svg" class="h-12"/>
