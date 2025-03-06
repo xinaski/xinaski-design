@@ -1,11 +1,15 @@
+<script setup>
+  import Footer from '../components/Footer.vue';
+</script>
+
 <template>
 
-  <header class="ml-16">
+  <header id="home" class="ml-16">
     <div class="pt-20 md:pt-0 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24">
       <div class="flex h-96 md:h-screen">
         <div class="m-auto">
           <div class="w-full space-y-4 lg:space-y-10">
-            <div class="">
+            <div class="pb-8">
               <p class="inline-block mb-4 text-xs font-bold text-black uppercase font-stretch-extra-expanded">
                 # HELLO
               </p>
@@ -25,13 +29,13 @@
 
   <main class="pl-20 pr-4">
 
-    <section class="relative">
+    <section id="about" class="relative">
       <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
         <div class="">
           <img class="md:hidden w-full pb-10 px-10 sm:px-20 mx-auto" 
             src="/about/imgabout01.png" alt="about image" />
           <div class="w-full md:w-4/6 space-y-4 md:pr-16 lg:pr-0">
-            <div class="pb-10">
+            <div class="pb-8">
               <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
                 #2 ABOUT ME<span class="text-gray-400 pl-2">How I am?</span>
               </p>
@@ -74,68 +78,48 @@
         src="/about/imgabout01.png" alt="about image" />
     </section>
 
-    <section>
+    <section id="portfolio">
       <div class="py-20 mx-auto sm:max-w-xl md:max-w-full lg:pt-60 lg:pb-40">
         <div class="w-full mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-          <div class="pb-20">
+          <div class="pb-16">
             <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
               #3 PORTFILO<span class="text-gray-400 pl-2">What did I do?</span>
             </p>
             <hr class="w-10 border-1">
           </div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-                </div>
+        <div class="grid md:grid-cols-7 md:gap-4">
+          <div class="md:col-span-3 space-y-4 pb-4">
+            <div class="grid grid-col-2 grid-cols-2 gap-4">
+              <div>
+                <img class="object-cover w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+              </div>
+              <div>
+                <img class="object-cover w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+              </div>
             </div>
             <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-                </div>
+              <img class="object-cover w-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-                </div>
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-                </div>
-            </div>
+          </div>
+          <div class="col-span-4 pb-4">
+            <img class="object-cover h-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
+          <div class="md:col-span-4">
+            <img class="object-cover h-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          </div>
+          <div class="md:col-span-3">
+            <img class="object-cover h-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="customers">
       <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
-        <div class="pb-20">
+        <div class="pb-10">
           <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
             #4 CUSTOMERS<span class="text-gray-400 pl-2">Who did I work for?</span>
           </p>
@@ -151,7 +135,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design, Vue frontend development and design of web and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -161,7 +145,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -171,7 +155,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design and design of web and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -181,7 +165,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design and design of web and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -191,7 +175,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design, Angular frontend development and design of web application.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -201,7 +185,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design and design of web and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -211,7 +195,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX/UI works, advertising design, Ruby on Rails and AngularJS frontend development and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -221,7 +205,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design and design of web and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -231,7 +215,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 Teacher of graphic design, editorial design (Indesign), vector illustration (Illustrator) and digital photography (Photoshop).
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -241,7 +225,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -251,7 +235,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 Label designs, advertising resources and catalogs design and layout.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -261,7 +245,7 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 Artistic Director and layout design a monthly travel magazine. Advertising designs.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
             <div class="max-w-md space-y-2">
               <h6 class="font-bold leading-5 font-stretch-extra-expanded">
@@ -271,27 +255,27 @@
               <p class="text-sm text-gray-900 font-stretch-expanded">
                 Label designs, advertising resources and catalogs design and layout.
               </p>
-              <a class="text-yellow-300 font-bold font-stretch-expanded">View Site</a>
+              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
             </div>
           </div>
         </div>
       </div>  
     </section>
 
-    <section>
+    <section id="skills">
       <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
-        <div class="pb-20">
+        <div class="pb-10">
           <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
             #5 SKILLS<span class="text-gray-400 pl-2">What is going on?</span>
           </p>
           <hr class="w-10 border-1">
         </div>
-        <div class="max-w-screen-xl sm:mx-auto space-y-8">
+        <div class="max-w-screen-xl sm:mx-auto space-y-12">
           <div class="space-y-4">
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
               Frontend
             </h6>
-            <div class="flex justify-start items-center space-x-4">
+            <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/frontend/html5.svg" class="h-12"/>
               <img src="/skills/frontend/css-3.svg" class="h-12"/>
               <img src="/skills/frontend/javascript.svg" class="h-12"/>
@@ -312,7 +296,7 @@
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
               Parsers and Processors
             </h6>
-            <div class="flex justify-start items-center space-x-4">
+            <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/parsers/haml.svg" class="h-12"/>
               <img src="/skills/parsers/sass.svg" class="h-12"/>
               <img src="/skills/parsers/less.svg" class="h-12"/>
@@ -324,7 +308,7 @@
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
               Markup and transport
             </h6>
-            <div class="flex justify-start items-center space-x-4">
+            <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/markup/xml-file.svg" class="h-12"/>
               <img src="/skills/markup/json.svg" class="h-12"/>
             </div>
@@ -333,7 +317,7 @@
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
               Design tools
             </h6>
-            <div class="flex justify-start items-center space-x-4">
+            <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/designtools/photoshop.svg" class="h-12"/>
               <img src="/skills/designtools/illustrator.svg" class="h-12"/>
               <img src="/skills/designtools/indesign.svg" class="h-12"/>
@@ -347,7 +331,7 @@
             <h6 class="font-bold leading-5 font-stretch-extra-expanded">
               Experience in UX/UI, mockup tools
             </h6>
-            <div class="flex justify-start items-center space-x-4">
+            <div class="flex flex-wrap justify-start items-center gap-6">
               <img src="/skills/mockuptools/figma.svg" class="h-12"/>
               <img src="/skills/mockuptools/invision.svg" class="h-12"/>
               <img src="/skills/mockuptools/proto-io.svg" class="h-12"/>
@@ -356,6 +340,8 @@
         </div>
       </div>  
     </section>
+
+    <Footer />
 
   </main>
 
