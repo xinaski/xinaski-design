@@ -9,7 +9,7 @@
     </button>
   </div>
 
-  <div id="drawer-right-menu" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-full md:w-1/2" tabindex="-1" aria-labelledby="drawer-right-label">
+  <div id="drawer-right-menu" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-full md:w-1/4" tabindex="-1" aria-labelledby="drawer-right-label">
     <button type="button" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
       class="text-red-500 bg-transparent hover:bg-gray-50 hover:text-red-700 rounded-lg text-sm size-16 absolute top-4 right-4 md:top-8 md:right-8 inline-flex items-center justify-center" >
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
@@ -17,7 +17,7 @@
       </svg>
       <span class="sr-only">Close menu</span>
     </button>
-    <div class="pt-16 px-4 md:px-10 grid gap-4">
+    <div class="pt-16 px-4 grid gap-4">
       <a type="button" href="#home" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
         class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
         <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">

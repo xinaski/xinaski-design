@@ -11,7 +11,7 @@ import es from './locales/es.json'; // Spanish
 import en from './locales/en.json'; // English
 
 const i18n = createI18n({
-  locale: 'ca', // Default language
+  locale: 'en', // Default language
   messages: {
     ca: ca,
     es: es,

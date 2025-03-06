@@ -57,21 +57,11 @@ onMounted(async () => {
               <hr class="w-10 border-1">
             </div>
             <div class="space-y-3 font-stretch-expanded text-sm">
-              <p class="text-gray-600">
-                {{ $t('about.description01') }}
-              </p>
-              <p class="text-gray-900">
-                {{ $t('about.description02') }}
-              </p>
-              <p class="text-gray-900">
-                {{ $t('about.description03') }}
-              </p>
-              <p class="text-gray-900">
-                {{ $t('about.description04') }}
-              </p>
-              <p class="text-gray-900">
-                {{ $t('about.description05') }}
-              </p>
+              <p class="text-gray-600" v-html="$t('about.description01')"></p>
+              <p class="text-gray-600" v-html="$t('about.description02')"></p>
+              <p class="text-gray-600" v-html="$t('about.description03')"></p>
+              <p class="text-gray-600" v-html="$t('about.description04')"></p>
+              <p class="text-gray-600" v-html="$t('about.description05')"></p>
             </div>
             <div class="space-y-1 pt-8">
               <p class="text-lg text-gray-950 font-stretch-expanded">

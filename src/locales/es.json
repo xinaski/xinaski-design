@@ -16,11 +16,11 @@
     "description": "Diseño UX/UI, prototipos y desarrollo frontend."
   },
   "about": {
-    "description01": "Mi nombre es Marc Zamora, nacido en 1976 en Barcelona. Actualmente vivo en Mataró (BCN).",
-    "description02": "Apasionado por las artes visuales y la comunicación, decidí fusionar estos dos campos de interés y especializarme en el diseño gráfico como forma de comunicación visual.",
-    "description03": "En los últimos años, me he centrado en el mundo online: diseño, aplicaciones móviles, campañas de banners, diseño de interfaces.",
-    "description04": "Me interesan mucho las técnicas y metodologías UX, y normalmente trabajo con Vue para el desarrollo frontend.",
-    "description05": "Me encanta el café.",
+    "description01": "Mi nombre es <strong class='text-black'>Marc Zamora</strong>, nacido en 1976 en Barcelona. Actualmente vivo en Mataró (BCN).",
+    "description02": "Apasionado por las <strong class='text-black'>artes visuales</strong> y la <strong class='text-black'>comunicación</strong>, decidí fusionar estos dos campos de interés y especializarme en el diseño gráfico como forma de comunicación visual.",
+    "description03": "En los últimos años, me he centrado en el mundo online: <strong class='text-black'>diseño</strong>, <strong class='text-black'>aplicaciones móviles</strong>, <strong class='text-black'>campañas de banners</strong>, <strong class='text-black'>diseño de interfaces</strong>.",
+    "description04": "Me interesan mucho las técnicas y metodologías <strong class='text-black'>UX</strong>, y normalmente trabajo con Vue para el <strong class='text-black'>desarrollo frontend</strong>.",
+    "description05": "Me encanta el <strong class='text-black'>café</strong>.",
     "cta-01": "No dudes en saludarme por",
     "cta-email": "correo electrónico",
     "cta-02": "Además, puedes descargar mi CV",
