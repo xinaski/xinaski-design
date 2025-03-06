@@ -1,6 +1,5 @@
 <script setup>
 import Footer from '../components/Footer.vue';
-
 import { ref, onMounted } from "vue";
 import CustomerBox from "../components/CustomerBox.vue";
 
@@ -14,7 +13,9 @@ onMounted(async () => {
     console.error("Error carregant el JSON:", error);
   }
 });
+
 </script>
+
 
 <template>
 
@@ -25,7 +26,7 @@ onMounted(async () => {
           <div class="w-full space-y-4 lg:space-y-10">
             <div class="pb-8">
               <p class="inline-block mb-4 text-xs font-bold text-black uppercase font-stretch-extra-expanded">
-                # HELLO
+                #{{ $t('hello') }}
               </p>
               <hr class="w-10 border-1">
             </div>
