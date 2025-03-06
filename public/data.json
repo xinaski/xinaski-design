@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "title": "Ethermail",
+    "description": "UX work, advertising design, Vue frontend development and design of web and mobile applications.",
+    "url": "https://ethermail.io/",
+    "date": "2022 - 2025"
+  },
+  {
+    "id": 2,
+    "title": "Sysdivision",
+    "description": "UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications.",
+    "url": "https://www.sysdivision.com/index_es.html",
+    "date": "2012 - 2022"
+  },
+  {
+    "id": 3,
+    "title": "Youtiful",
+    "description": "UX work, advertising design and design of web and mobile applications.",
+    "url": "",
+    "date": "2020 - 2022"
+  },
+  {
+    "id": 4,
+    "title": "My Sneakers",
+    "description": "UX work, advertising design and design of web and mobile applications.",
+    "url": "https://mysneakers.app/",
+    "date": "2019 - 2022"
+  },
+  {
+    "id": 5,
+    "title": "Blueliv",
+    "description": "UX work, advertising design, Angular frontend development and design of web application.",
+    "url": "https://blueliv.com",
+    "date": "2019 - 2022"
+  },
+  {
+    "id": 6,
+    "title": "Olyseum",
+    "description": "UX work, advertising design and design of web and mobile applications.",
+    "url": "https://olyverse.com/",
+    "date": "2019 - 2020"
+  },
+  {
+    "id": 7,
+    "title": "Pole Dance factory",
+    "description": "UX/UI works, advertising design, Ruby on Rails and AngularJS frontend development and mobile applications.",
+    "url": "https://poledancefactory.es/",
+    "date": "2015 - 2017"
+  },
+  {
+    "id": 8,
+    "title": "Orekalab",
+    "description": "UX work, advertising design and design of web and mobile applications.",
+    "url": "https://orekalab.com/",
+    "date": "2015 - 2017"
+  },
+  {
+    "id": 9,
+    "title": "Espai Virreina",
+    "description": "Teacher of graphic design, editorial design (Indesign), vector illustration (Illustrator) and digital photography (Photoshop).",
+    "url": "",
+    "date": "2009 - 2013"
+  },
+  {
+    "id": 10,
+    "title": "Spotfav",
+    "description": "UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications.",
+    "url": "https://www.spotfav.com/",
+    "date": "2013 - 2016"
+  },
+  {
+    "id": 11,
+    "title": "Javier Simorra",
+    "description": "Label designs, advertising resources and catalogs design and layout.",
+    "url": "https://simorra.com/",
+    "date": "2010 - 2011"
+  },
+  {
+    "id": 12,
+    "title": "Viatges cat",
+    "description": "Artistic Director and layout design a monthly travel magazine. Advertising designs.",
+    "url": "",
+    "date": "2010 - 2011"
+  },
+  {
+    "id": 13,
+    "title": "Creu Roja",
+    "description": "Label designs, advertising resources and catalogs design and layout.",
+    "url": "",
+    "date": "2010 - 2011"
+  }
+]

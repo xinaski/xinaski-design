@@ -1,5 +1,19 @@
 <script setup>
-  import Footer from '../components/Footer.vue';
+import Footer from '../components/Footer.vue';
+
+import { ref, onMounted } from "vue";
+import CustomerBox from "../components/CustomerBox.vue";
+
+const customers = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await fetch("/data.json");
+    customers.value = await response.json();
+  } catch (error) {
+    console.error("Error carregant el JSON:", error);
+  }
+});
 </script>
 
 <template>
@@ -92,26 +106,26 @@
           <div class="md:col-span-3 space-y-4 pb-4">
             <div class="grid grid-col-2 grid-cols-2 gap-4">
               <div>
-                <img class="object-cover w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+                <img class="object-cover w-full rounded-lg" src="/portfolio/portfolio02.png" alt="">
               </div>
               <div>
-                <img class="object-cover w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+                <img class="object-cover w-full rounded-lg" src="/portfolio/portfolio03.png" alt="">
               </div>
             </div>
             <div class="grid gap-4">
-              <img class="object-cover w-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+              <img class="object-cover w-full rounded-lg h-40 md:h-80" src="/portfolio/portfolio04.png" alt="">
             </div>
           </div>
           <div class="col-span-4 pb-4">
-            <img class="object-cover h-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <img class="object-cover h-full rounded-lg" src="/portfolio/portfolio08.png" alt="">
           </div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
-          <div class="md:col-span-4">
-            <img class="object-cover h-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <div class="md:col-span-4 h-40 md:h-96">
+            <img class="object-cover h-40 md:h-96 w-full rounded-lg" src="/portfolio/portfolio05.png" alt="">
           </div>
-          <div class="md:col-span-3">
-            <img class="object-cover h-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <div class="md:col-span-3 h-40 md:h-96">
+            <img class="object-cover h-40 md:h-96 w-full rounded-lg" src="/portfolio/portfolio01.png" alt="">
           </div>
         </div>
       </div>
@@ -127,136 +141,14 @@
         </div>
         <div class="max-w-screen-xl sm:mx-auto">
           <div class="grid gap-8 row-gap-8 sm:row-gap-0 sm:grid-cols-2">
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Ethermail
-                <span class="text-sm text-gray-400 pl-2">2022 - 2025</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design, Vue frontend development and design of web and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Sysdivision
-                <span class="text-sm text-gray-400 pl-2">2012 - 2022</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Youtiful
-                <span class="text-sm text-gray-400 pl-2">2020 - 2022</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design and design of web and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                My Sneakers
-                <span class="text-sm text-gray-400 pl-2">2019 - 2022</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design and design of web and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Blueliv
-                <span class="text-sm text-gray-400 pl-2">2019 - 2022</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design, Angular frontend development and design of web application.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Olyseum
-                <span class="text-sm text-gray-400 pl-2">2019 - 2020</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design and design of web and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Pole Dance factory
-                <span class="text-sm text-gray-400 pl-2">2015 - 2017</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX/UI works, advertising design, Ruby on Rails and AngularJS frontend development and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Orekalab
-                <span class="text-sm text-gray-400 pl-2">2015 - 2017</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design and design of web and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Espai Virreina
-                <span class="text-sm text-gray-400 pl-2">2009 - 2013</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                Teacher of graphic design, editorial design (Indesign), vector illustration (Illustrator) and digital photography (Photoshop).
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Spotfav
-                <span class="text-sm text-gray-400 pl-2">2013 - 2016</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Javier Simorra
-                <span class="text-sm text-gray-400 pl-2">2010 - 2011</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                Label designs, advertising resources and catalogs design and layout.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Viatges cat
-                <span class="text-sm text-gray-400 pl-2">2010 - 2011</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                Artistic Director and layout design a monthly travel magazine. Advertising designs.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
-            <div class="max-w-md space-y-2">
-              <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-                Creu Roja
-                <span class="text-sm text-gray-400 pl-2">2010 - 2011</span>
-              </h6>
-              <p class="text-sm text-gray-900 font-stretch-expanded">
-                Label designs, advertising resources and catalogs design and layout.
-              </p>
-              <a class="text-sm text-yellow-300 hover:text-yellow-400 font-bold font-stretch-expanded">View Site</a>
-            </div>
+            <CustomerBox 
+              v-for="CustomerBox in customers" 
+              :key="CustomerBox.id" 
+              :title="CustomerBox.title" 
+              :description="CustomerBox.description" 
+              :url="CustomerBox.url"
+              :date="CustomerBox.date"
+            />
           </div>
         </div>
       </div>  
