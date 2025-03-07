@@ -1,19 +1,32 @@
 <script setup>
-import Footer from '../components/Footer.vue';
-import { ref, onMounted } from "vue";
-import CustomerBox from "../components/CustomerBox.vue";
+  import Footer from '../components/Footer.vue';
+  import { ref, onMounted, computed } from "vue";
+  import { useI18n } from "vue-i18n";
+  import CustomerBox from "../components/CustomerBox.vue";
 
-const customers = ref([]);
+  const { locale } = useI18n();
+  const customers = ref([]);
 
-onMounted(async () => {
-  try {
-    const response = await fetch("/data.json");
-    customers.value = await response.json();
-  } catch (error) {
-    console.error("Error carregant el JSON:", error);
-  }
-});
+  onMounted(async () => {
+    try {
+      const response = await fetch("/data/customers.json");
+      const data = await response.json();
+      customers.value = data; // NO cal fer data.customers si el JSON és un array directe
+    } catch (error) {
+      console.error("Error carregant el JSON:", error);
+    }
+  });
 
+  // Retorna només la informació en l'idioma seleccionat
+  const translatedCustomers = computed(() =>
+  customers.value.map(customer => ({
+    id: customer.id,
+    title: customer.title, // No canviem res aquí, perquè és un string directe
+    description: customer.description[locale.value], // Traducció correcta
+    url: customer.url,
+    date: customer.date
+  }))
+);
 </script>
 
 
@@ -133,13 +146,13 @@ onMounted(async () => {
         </div>
         <div class="max-w-screen-xl sm:mx-auto">
           <div class="grid gap-8 row-gap-8 sm:row-gap-0 sm:grid-cols-2">
-            <CustomerBox 
-              v-for="CustomerBox in customers" 
-              :key="CustomerBox.id" 
-              :title="CustomerBox.title" 
-              :description="CustomerBox.description" 
-              :url="CustomerBox.url"
-              :date="CustomerBox.date"
+            <CustomerBox
+              v-for="customer in translatedCustomers"
+              :key="customer.id"
+              :title="customer.title"
+              :description="customer.description"
+              :url="customer.url"
+              :date="customer.date"
             />
           </div>
         </div>

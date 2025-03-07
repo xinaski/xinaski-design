@@ -1,0 +1,145 @@
+[
+  {
+    "id": 1,
+    "title": "Ethermail",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari, desenvolupament frontend amb Vue i disseny d'aplicacions web i mòbils.",
+      "es": "Trabajo de UX, diseño publicitario, desarrollo frontend con Vue y diseño de aplicaciones web y móviles.",
+      "en": "UX work, advertising design, Vue frontend development and design of web and mobile applications."
+    },
+    "url": "https://ethermail.io/",
+    "date": "2022 - 2025"
+  },
+  {
+    "id": 2,
+    "title": "Sysdivision",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari, desenvolupament frontend amb Ruby on Rails i disseny d'aplicacions web i mòbils.",
+      "es": "Trabajo de UX, diseño publicitario, desarrollo frontend con Ruby on Rails y diseño de aplicaciones web y móviles.",
+      "en": "UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications."
+    },
+    "url": "https://www.sysdivision.com/index_es.html",
+    "date": "2012 - 2022"
+  },
+  {
+    "id": 3,
+    "title": "Youtiful",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari i disseny d'aplicacions web i mòbils.",
+      "es": "Trabajo de UX, diseño publicitario y diseño de aplicaciones web y móviles.",
+      "en": "UX work, advertising design and design of web and mobile applications."
+    },
+    "url": "",
+    "date": "2020 - 2022"
+  },
+  {
+    "id": 4,
+    "title": "My Sneakers",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari i disseny d'aplicacions web i mòbils.",
+      "es": "Trabajo de UX, diseño publicitario y diseño de aplicaciones web y móviles.",
+      "en": "UX work, advertising design and design of web and mobile applications."
+    },
+    "url": "https://mysneakers.app/",
+    "date": "2019 - 2022"
+  },
+  {
+    "id": 5,
+    "title": "Blueliv",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari, desenvolupament frontend amb Angular i disseny d'aplicacions web.",
+      "es": "Trabajo de UX, diseño publicitario, desarrollo frontend con Angular y diseño de aplicaciones web.",
+      "en": "UX work, advertising design, Angular frontend development and design of web application."
+    },
+    "url": "https://blueliv.com",
+    "date": "2019 - 2022"
+  },
+  {
+    "id": 6,
+    "title": "Olyseum",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari i disseny d'aplicacions web i mòbils.",
+      "es": "Trabajo de UX, diseño publicitario y diseño de aplicaciones web y móviles.",
+      "en": "UX work, advertising design and design of web and mobile applications."
+    },
+    "url": "https://olyverse.com/",
+    "date": "2019 - 2020"
+  },
+  {
+    "id": 7,
+    "title": "Pole Dance Factory",
+    "description": {
+      "ca": "Treball de UX/UI, disseny publicitari, desenvolupament frontend amb Ruby on Rails i AngularJS, i aplicacions mòbils.",
+      "es": "Trabajo de UX/UI, diseño publicitario, desarrollo frontend con Ruby on Rails y AngularJS, y aplicaciones móviles.",
+      "en": "UX/UI works, advertising design, Ruby on Rails and AngularJS frontend development and mobile applications."
+    },
+    "url": "https://poledancefactory.es/",
+    "date": "2015 - 2017"
+  },
+  {
+    "id": 8,
+    "title": "Orekalab",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari i disseny d'aplicacions web i mòbils.",
+      "es": "Trabajo de UX, diseño publicitario y diseño de aplicaciones web y móviles.",
+      "en": "UX work, advertising design and design of web and mobile applications."
+    },
+    "url": "https://orekalab.com/",
+    "date": "2015 - 2017"
+  },
+  {
+    "id": 9,
+    "title": "Espai Virreina",
+    "description": {
+      "ca": "Professor de disseny gràfic, disseny editorial (Indesign), il·lustració vectorial (Illustrator) i fotografia digital (Photoshop).",
+      "es": "Profesor de diseño gráfico, diseño editorial (Indesign), ilustración vectorial (Illustrator) y fotografía digital (Photoshop).",
+      "en": "Teacher of graphic design, editorial design (Indesign), vector illustration (Illustrator) and digital photography (Photoshop)."
+    },
+    "url": "",
+    "date": "2009 - 2013"
+  },
+  {
+    "id": 10,
+    "title": "Spotfav",
+    "description": {
+      "ca": "Treball de UX, disseny publicitari, desenvolupament frontend amb Ruby on Rails i disseny d'aplicacions web i mòbils.",
+      "es": "Trabajo de UX, diseño publicitario, desarrollo frontend con Ruby on Rails y diseño de aplicaciones web y móviles.",
+      "en": "UX work, advertising design, Ruby on Rails frontend development and design of web and mobile applications."
+    },
+    "url": "https://www.spotfav.com/",
+    "date": "2013 - 2016"
+  },
+  {
+    "id": 11,
+    "title": "Javier Simorra",
+    "description": {
+      "ca": "Disseny d'etiquetes, recursos publicitaris i disseny i maquetació de catàlegs.",
+      "es": "Diseño de etiquetas, recursos publicitarios y diseño y maquetación de catálogos.",
+      "en": "Label designs, advertising resources and catalogs design and layout."
+    },
+    "url": "https://simorra.com/",
+    "date": "2010 - 2011"
+  },
+  {
+    "id": 12,
+    "title": "Viatges Cat",
+    "description": {
+      "ca": "Director artístic i dissenyador de maquetació d'una revista de viatges mensual. Dissenys publicitaris.",
+      "es": "Director artístico y diseñador de maquetación de una revista de viajes mensual. Diseños publicitarios.",
+      "en": "Artistic Director and layout design a monthly travel magazine. Advertising designs."
+    },
+    "url": "",
+    "date": "2010 - 2011"
+  },
+  {
+    "id": 13,
+    "title": "Creu Roja",
+    "description": {
+      "ca": "Disseny d'etiquetes, recursos publicitaris i disseny i maquetació de catàlegs.",
+      "es": "Diseño de etiquetas, recursos publicitarios y diseño y maquetación de catálogos.",
+      "en": "Label designs, advertising resources and catalogs design and layout."
+    },
+    "url": "",
+    "date": "2010 - 2011"
+  }
+]
