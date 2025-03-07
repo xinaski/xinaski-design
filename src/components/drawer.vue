@@ -9,7 +9,7 @@
     </button>
   </div>
 
-  <div id="drawer-right-menu" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-full md:w-1/4" tabindex="-1" aria-labelledby="drawer-right-label">
+  <div id="drawer-right-menu" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-full sm:w-2/5" tabindex="-1" aria-labelledby="drawer-right-label">
     <button type="button" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
       class="text-red-500 bg-transparent hover:bg-gray-50 hover:text-red-700 rounded-lg text-sm size-16 absolute top-4 right-4 md:top-8 md:right-8 inline-flex items-center justify-center" >
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
@@ -17,59 +17,55 @@
       </svg>
       <span class="sr-only">Close menu</span>
     </button>
-    <div class="pt-16 px-4 grid gap-4">
+    <div class="pt-24 grid gap-4">
       <a type="button" href="#home" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
-        class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
-        <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          # {{ $t('navbar.home-title') }}
+        class="bg-black hover:bg-gray-950 text-white text-left font-medium rounded-full text-md px-6 py-4">
+        <span class="inline-block text-sm font-stretch-extra-expanded">
+          #1 {{ $t('navbar.home-title') }}
         </span>
       </a>
-      <hr class="w-10 border-1 ml-6">
       <a type="button" href="#about" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
-        class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
-        <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #2 {{ $t('navbar.about-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.about-subtitle') }}</span>
+      class="bg-black hover:bg-gray-950 text-white text-left font-medium rounded-full text-md px-6 py-4">
+        <span class="inline-block text-sm font-stretch-extra-expanded">
+          #2 {{ $t('navbar.about-title') }}<span class="text-yellow-300 pl-2">{{ $t('navbar.about-subtitle') }}</span>
         </span>
       </a>
-      <hr class="w-10 border-1 ml-6">
       <a type="button" href="#portfolio" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
-        class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
-        <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #3 {{ $t('navbar.portfolio-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.portfolio-subtitle') }}</span>
+      class="bg-black hover:bg-gray-950 text-white text-left font-medium rounded-full text-md px-6 py-4">
+        <span class="inline-block text-sm font-stretch-extra-expanded">
+          #3 {{ $t('navbar.portfolio-title') }}<span class="text-yellow-300 pl-2">{{ $t('navbar.portfolio-subtitle') }}</span>
         </span>
       </a>
-      <hr class="w-10 border-1 ml-6">
       <a type="button" href="#customers" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
-        class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
-        <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #4 {{ $t('navbar.customers-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.customers-subtitle') }}</span>
+      class="bg-black hover:bg-gray-950 text-white text-left font-medium rounded-full text-md px-6 py-4">
+        <span class="inline-block text-sm font-stretch-extra-expanded">
+          #4 {{ $t('navbar.customers-title') }}<span class="text-yellow-300 pl-2">{{ $t('navbar.customers-subtitle') }}</span>
         </span>
       </a>
-      <hr class="w-10 border-1 ml-6">
       <a type="button" href="#skills" data-drawer-hide="drawer-right-menu" aria-controls="drawer-right-menu" 
-        class="text-gray-900 text-left bg-white hover:bg-gray-100 font-medium rounded-lg text-md px-6 py-4">
-        <span class="inline-block text-sm font-bold text-black font-stretch-extra-expanded">
-          #5 {{ $t('navbar.skills-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.skills-subtitle') }}</span>
+      class="bg-black hover:bg-gray-950 text-white text-left font-medium rounded-full text-md px-6 py-4">
+        <span class="inline-block text-sm font-stretch-extra-expanded">
+          #5 {{ $t('navbar.skills-title') }}<span class="text-yellow-300 pl-2">{{ $t('navbar.skills-subtitle') }}</span>
         </span>
       </a>
     </div>
-    <div class="flex justify-start items-center gap-4">
-        <button  @click="changeLanguage('ca')" 
-          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
-          <img src="/flag/flag-cat.svg" class="size-6" />
-          <span class="sr-only">Català</span>
-        </button>
-        <button  @click="changeLanguage('es')" 
-          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
-          <img src="/flag/flag-es.svg" class="size-6" />
-          <span class="sr-only">Castellano</span>
-        </button>
-        <button  @click="changeLanguage('en')" 
-          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
-          <img src="/flag/flag-en.svg" class="size-6" />
-          <span class="sr-only">English</span>
-        </button>
-      </div>
+    <div class="fixed bottom-4 right-6 flex justify-between items-cente border-t border-dashed border-black pt-2" role="group">
+      <button @click="changeLanguage('ca')"  
+        class="flex justify-center items-center w-full px-6 py-3 text-sm font-medium text-gray-900 rounded-lg bg-transparent hover:bg-gray-50 cursor-pointer">
+        <img src="/flag/flag-cat.svg" class="opacity-75 size-4 mr-2" />
+        Cat
+      </button>
+      <button @click="changeLanguage('es')"  
+      class="flex justify-center items-center w-full px-6 py-3 text-sm font-medium text-gray-900 rounded-lg bg-transparent hover:bg-gray-50 cursor-pointer">
+      <img src="/flag/flag-es.svg" class="opacity-75 size-4 mr-2" />
+        Es
+      </button>
+      <button @click="changeLanguage('en')" 
+        class="flex justify-center items-center w-full px-6 py-3 text-sm font-medium text-gray-900 rounded-lg bg-transparent hover:bg-gray-50 cursor-pointer">
+        <img src="/flag/flag-en.svg" class="opacity-75 size-4 mr-2" />
+        En
+      </button>
+    </div>
   </div>
 
 </template>
