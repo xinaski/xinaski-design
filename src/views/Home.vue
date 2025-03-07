@@ -30,8 +30,8 @@ onMounted(async () => {
               </p>
               <hr class="w-10 border-1">
             </div>
-            <h2 class="font-sans text-5xl font-extrabold text-gray-950 sm:text-8xl font-stretch-extra-expanded leading-10 md:leading-20">
-              I make <span class="text-yellow-300">awesome</span> designs
+            <h2 class="font-sans text-5xl font-extrabold text-gray-950 sm:text-8xl font-stretch-extra-expanded leading-10 md:leading-20"
+              v-html="$t('home.welcome')">
             </h2>
             <p class="text-lg text-black md:text-2xl font-stretch-expanded">
               {{ $t('home.description') }}

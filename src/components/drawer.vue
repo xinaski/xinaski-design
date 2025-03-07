@@ -53,7 +53,34 @@
         </span>
       </a>
     </div>
-
+    <div class="flex justify-start items-center gap-4">
+        <button  @click="changeLanguage('ca')" 
+          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
+          <img src="/flag/flag-cat.svg" class="size-6" />
+          <span class="sr-only">Català</span>
+        </button>
+        <button  @click="changeLanguage('es')" 
+          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
+          <img src="/flag/flag-es.svg" class="size-6" />
+          <span class="sr-only">Castellano</span>
+        </button>
+        <button  @click="changeLanguage('en')" 
+          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
+          <img src="/flag/flag-en.svg" class="size-6" />
+          <span class="sr-only">English</span>
+        </button>
+      </div>
   </div>
 
 </template>
+
+<script setup>
+  import { useI18n } from 'vue-i18n';
+
+  // change language
+  const { locale } = useI18n();
+
+  function changeLanguage(language) {
+    locale.value = language;  // upload language
+  }
+</script>

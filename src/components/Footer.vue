@@ -1,14 +1,3 @@
-<script setup>
-  import { useI18n } from 'vue-i18n';
-
-  // change language
-  const { locale } = useI18n();
-
-  function changeLanguage(language) {
-    locale.value = language;  // upload language
-  }
-
-</script>
 
 <template>
   <footer class="w-full mx-auto max-w-screen-xl border-t border-dashed border-gray-900 py-6 mt-20">
@@ -18,21 +7,11 @@
         All Rights Reserved.
       </p>
       <div class="flex justify-start items-center gap-4">
-        <button  @click="changeLanguage('ca')" 
-          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
-          <img src="/flag/flag-cat.svg" class="size-6" />
-          <span class="sr-only">Català</span>
-        </button>
-        <button  @click="changeLanguage('es')" 
-          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
-          <img src="/flag/flag-es.svg" class="size-6" />
-          <span class="sr-only">Castellano</span>
-        </button>
-        <button  @click="changeLanguage('en')" 
-          class="text-blue-700 border border-blue-300 rounded-full inline-flex items-center">
-          <img src="/flag/flag-en.svg" class="size-6" />
-          <span class="sr-only">English</span>
-        </button>
+        <a class="" href="">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 25 26" fill="none">
+            <path d="M10.0859 16.5938L5.76465 19.6455C4.41374 20.7035 3.52669 21.4684 3.10352 21.9404L0.24707 17.9854C1.27246 17.3994 2.25716 16.7809 3.20117 16.1299L7.74219 12.9072L3.20117 9.68457C2.87565 9.45671 2.39551 9.17188 1.76074 8.83008C1.14225 8.48828 0.629557 8.17904 0.222656 7.90234L3.10352 3.87402C3.6569 4.50879 4.85319 5.50163 6.69238 6.85254C8.54785 8.18717 9.67904 8.99284 10.0859 9.26953V3.94727C10.0859 2.64518 9.96387 1.48145 9.71973 0.456055H14.6514C14.4886 2.19759 14.4072 3.35319 14.4072 3.92285V9.31836C14.8792 8.97656 15.5954 8.45573 16.5557 7.75586C17.5322 7.05599 18.4274 6.41309 19.2412 5.82715C20.055 5.22493 20.763 4.58203 21.3652 3.89844L24.1973 7.87793C23.0905 8.5127 22.1139 9.13118 21.2676 9.7334L16.7266 12.9316L21.2676 16.1787C21.7884 16.5531 22.7812 17.1553 24.2461 17.9854L21.3652 22.0137C20.5677 21.1836 19.762 20.4674 18.9482 19.8652C18.1507 19.263 17.6299 18.8724 17.3857 18.6934C17.1579 18.5143 16.6208 18.14 15.7744 17.5703C14.9281 16.9844 14.4723 16.667 14.4072 16.6182V21.9648C14.4072 22.4857 14.4886 23.6413 14.6514 25.4316H9.71973C9.96387 24.4062 10.0859 23.2425 10.0859 21.9404V16.5938Z" fill="black"/>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>

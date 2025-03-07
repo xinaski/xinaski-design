@@ -12,7 +12,7 @@
     "skills-subtitle": "What have I used?"
   },
   "home": {
-    "welcome": "I make awesome designs",
+    "welcome": "I make <span class='text-yellow-300'>awesome</span> designs",
     "description": "UX/UI design, Prototypes & frontend development."
   },
   "about": {
