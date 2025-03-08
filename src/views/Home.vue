@@ -29,7 +29,6 @@
 );
 </script>
 
-
 <template>
 
   <header id="home" class="ml-12 md:ml-16">
@@ -243,4 +242,13 @@
   </main>
 
 </template>
+
+<style scoped>
+  .font-stretch-extra-expanded {
+    font-stretch: extra-expanded !important;
+  }
+  .font-stretch-expanded {
+    font-stretch: expanded !important;
+  }
+</style>
   
