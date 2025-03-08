@@ -55,7 +55,7 @@
     </div>
   </header>
 
-  <main class="pl-20 pr-4">
+  <main class="pl-16 md:pl-20 pr-4">
 
     <section id="about" class="relative">
       <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
@@ -77,13 +77,13 @@
               <p class="text-gray-600" v-html="$t('about.description05')"></p>
             </div>
             <div class="space-y-1 pt-8">
-              <p class="text-lg text-gray-950 font-stretch-expanded">
+              <p class="md:text-lg text-gray-950 font-stretch-expanded">
                 {{ $t('about.cta-01') }}
                 <a class="text-yellow-300 font-bold" href="mailto:xinasking@gmail.com">
                   {{ $t('about.cta-email') }}
                 </a>
               </p>
-              <p class="text-lg text-gray-950 font-stretch-expanded">
+              <p class="md:text-lg text-gray-950 font-stretch-expanded">
                 {{ $t('about.cta-02') }}
                 <a class="text-yellow-300 font-bold" href="">
                   {{ $t('about.cta-cv') }}
