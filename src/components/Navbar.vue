@@ -1,7 +1,7 @@
 <template>
   <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-12 md:w-16 h-screen" aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto border-r border-dashed border-gray-900">
-      <div class="flex flex-col space-y-2 pt-30">
+      <div class="flex flex-col space-y-2 pt-15 md:pt-30">
         <a class="rotate-270 whitespace-nowrap origin-center text-xs text-black uppercase font-stretch-extra-expanded tracking-wide"
           href="#home">
           marc zamora
