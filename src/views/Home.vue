@@ -32,7 +32,7 @@
 
 <template>
 
-  <header id="home" class="ml-16">
+  <header id="home" class="ml-12 md:ml-16">
     <div class="pt-20 md:pt-0 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24">
       <div class="flex h-96 md:h-screen">
         <div class="m-auto">
