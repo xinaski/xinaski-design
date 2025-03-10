@@ -8,7 +8,7 @@
     </svg>
     <span class="sr-only">Open actions menu</span>
   </button>
-  <div :class="{ 'hidden': !isMenuOpen }" class="flex flex-col items-end mt-0 space-y-2">
+  <div :class="{ 'hidden': !isMenuOpen }" class="flex flex-col items-end mt-0 md:mt-2 space-y-2">
     <a href="#home" @click="closeMenu"
       class="relative py-3 px-6 bg-black hover:bg-gray-950 text-white hover:text-yellow-300 font-stretch-extra-expanded text-right border border-black rounded-full shadow-xs ">
       #1 {{ $t('navbar.home-title') }}
