@@ -1,11 +1,11 @@
-
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
-    "./index.html",  // O la ruta de tu archivo HTML
-    "./src/**/*.{js,jsx,ts,tsx,vue}", // Rutas de archivos JS/TS/Vue donde usas clases Tailwind
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}", // 👈 Assegura't que té els fitxers Vue
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
