@@ -19,15 +19,33 @@
 
   // Retorna només la informació en l'idioma seleccionat
   const translatedCustomers = computed(() =>
-  customers.value.map(customer => ({
-    id: customer.id,
-    title: customer.title, // No canviem res aquí, perquè és un string directe
-    description: customer.description[locale.value], // Traducció correcta
-    url: customer.url,
-    date: customer.date
-  }))
-);
+    customers.value.map(customer => ({
+      id: customer.id,
+      title: customer.title, // No canviem res aquí, perquè és un string directe
+      description: customer.description[locale.value], // Traducció correcta
+      url: customer.url,
+      date: customer.date,
+    })) // Aquesta coma és necessària
+  );
+
+  const downloadPDF = () => {
+    const pdfUrl = "/pdf/marczamora-cv.pdf"; // url
+    fetch(pdfUrl)
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "marczamora-cv.pdf"; // Nom correcte del fitxer
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => console.error("Error descarregant el PDF:", error));
+  };
 </script>
+
 
 <template>
 
@@ -84,9 +102,9 @@
               </p>
               <p class="md:text-lg text-gray-950 font-stretch-expanded">
                 {{ $t('about.cta-02') }}
-                <a class="text-yellow-300 font-bold" href="">
+                <button class="text-yellow-300 font-bold" @click="downloadPDF">
                   {{ $t('about.cta-cv') }}
-                </a>
+                </button>
               </p>
             </div>
           </div>
