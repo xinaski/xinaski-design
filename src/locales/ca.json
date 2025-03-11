@@ -16,11 +16,11 @@
     "description": "Disseny UX/UI, prototips i desenvolupament frontend."
   },
   "about": {
-    "description01": "El meu nom és <strong class='text-black'>Marc Zamora</strong>, nascut el 1976 a Barcelona. Actualment visc a Mataró (BCN).",
-    "description02": "Apassionat per les <strong class='text-black'>arts visuals</strong> i la <strong class='text-black'>comunicació</strong>, vaig decidir fusionar aquests dos camps del meu interès i especialitzar-me en el disseny gràfic com a forma de comunicació visual.",
-    "description03": "En els darrers anys, m'he centrat en el món en línia: <strong class='text-black'>disseny</strong>, <strong class='text-black'>aplicacions mòbils</strong>, <strong class='text-black'>campanyes de bàners</strong>, <strong class='text-black'>disseny d'interfícies</strong>.",
-    "description04": "M’interessen molt les tècniques i metodologies <strong class='text-black'>UX</strong>, i normalment treballo amb Vue per al <strong class='text-black'>desenvolupament frontend</strong>.",
-    "description05": "M'encanta el <strong class='text-black'>cafè</strong>.",
+    "description01": "Sóc en <strong class='text-black'>Marc Zamora</strong>, un dissenyador i desenvolupador nascut a Barcelona amb passió per la narrativa visual i les experiències digitals. Basat a Mataró, estic especialitzat en el disseny gràfic com una poderosa forma de comunicació visual, combinant creativitat i funcionalitat.",
+    "description02": "Amb anys d'experiència en disseny digital, la meva feina se centra en <strong class='text-black'>interfícies web i mòbils</strong>, <strong class='text-black'>campanyes de banners</strong> i <strong class='text-black'>disseny centrat en l'usuari</strong>. Tinc un gran interès en metodologies i tècniques de <strong class='text-black'>UX</strong>, assegurant que cada projecte sigui tant visualment atractiu com intuïtiu. En l'àmbit tècnic, treballo sovint amb <strong class='text-black'>Vue</strong> per donar vida a experiències front-end fluides i responsives.",
+    "description03": "Més enllà del disseny i el desenvolupament, crec fermament que les grans idees comencen amb un bon <strong class='text-black'>cafè</strong>. Connectem i creem alguna cosa significativa.",
+    "description04": "",
+    "description05": "",
     "cta-01": "No dubtis a saludar-me per",
     "cta-email": "correu electrònic",
     "cta-02": "A més, pots descarregar el meu CV",
