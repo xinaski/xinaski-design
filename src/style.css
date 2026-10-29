@@ -341,3 +341,28 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
  .about-section .about-visual img { max-height:310px; object-position:center; }
  .about-section .about-details { width:100%; }
 }
+
+
+/* Left-anchored About composition with intentional whitespace at right. */
+.about-section .about-grid {
+  grid-template-columns:minmax(0,240px) minmax(0,520px);
+  justify-content:start;
+  column-gap:clamp(8px,1.6vw,22px);
+  row-gap:clamp(34px,4vw,60px);
+}
+.about-section .about-visual { justify-content:flex-start; }
+.about-section .about-visual img { width:100%; max-height:330px; object-position:left center; }
+.about-section .about-copy { justify-self:start; }
+.about-section .about-copy h2 { font-size:clamp(39px,4vw,65px); }
+.about-section .about-details { width:min(100%,1000px); margin-left:0; margin-right:0; }
+@media(max-width:900px) and (min-width:641px) {
+ .about-section .about-grid { grid-template-columns:minmax(0,30%) minmax(0,62%); column-gap:2%; }
+ .about-section .about-visual img { max-height:300px; }
+ .about-section .about-copy h2 { font-size:clamp(32px,4.5vw,48px); }
+}
+@media(max-width:640px) {
+ .about-section .about-grid { grid-template-columns:1fr; }
+ .about-section .about-visual { justify-content:flex-start; }
+ .about-section .about-visual img { max-width:280px; }
+ .about-section .about-details { width:100%; }
+}
