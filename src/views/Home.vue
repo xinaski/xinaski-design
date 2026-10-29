@@ -87,18 +87,37 @@ const capabilities = [
         <div class="capability-list">
           <div v-for="cap in capabilities" :key="cap.title" class="capability"><h3>{{ cap.title }}</h3><p>{{ cap.detail }}</p><span>↗</span></div>
         </div>
-        <div class="tech-stack" aria-label="Tecnologies i eines">
-          <div class="tech-stack-icons">
-            <div v-for="tech in [
-              { name:'HTML5', icon:'html5/html5-original.svg' },
-              { name:'CSS3', icon:'css3/css3-original.svg' },
-              { name:'JavaScript', icon:'javascript/javascript-original.svg' },
-              { name:'Vue', icon:'vuejs/vuejs-original.svg' },
-              { name:'Angular', icon:'angular/angular-original.svg' },
-              { name:'WordPress', icon:'wordpress/wordpress-original.svg' }
-            ]" :key="tech.name" class="tech-stack-item">
-              <img :src="'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + tech.icon" :alt="tech.name" loading="lazy">
-              <span>{{ tech.name }}</span>
+        <div class="tech-stack" aria-label="Eines de disseny i tecnologies">
+          <div class="tech-group">
+            <h3>Design Tools</h3>
+            <div class="tech-stack-icons">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" title="Figma" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/affinitydesigner/affinitydesigner-original.svg" alt="Affinity Designer" title="Affinity Designer" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg" alt="Sketch" title="Sketch" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop" title="Photoshop" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" alt="Illustrator" title="Illustrator" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/indesign/indesign-original.svg" alt="InDesign" title="InDesign" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" alt="Premiere Pro" title="Premiere Pro" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg" alt="XD" title="XD" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/invision/invision-original.svg" alt="InVision" title="InVision" loading="lazy">
+            </div>
+          </div>
+          <div class="tech-group">
+            <h3>Frontend Development</h3>
+            <div class="tech-stack-icons">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" alt="jQuery" title="jQuery" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" alt="Ruby" title="Ruby" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="Angular" title="Angular" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" title="Vue" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" title="Bootstrap" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg" alt="WordPress" title="WordPress" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/shopify/shopify-original.svg" alt="Shopify" title="Shopify" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="Sass" title="Sass" loading="lazy">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/less/less-plain-wordmark.svg" alt="Less" title="Less" loading="lazy">
             </div>
           </div>
         </div>
