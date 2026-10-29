@@ -106,3 +106,33 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 .capability span { font-size:24px; }
 @media(max-width:900px) { .about-grid { grid-template-columns:1fr; } .about-visual { min-height:300px; max-height:500px; } .client-row { grid-template-columns:35px 1fr 50px 20px; } .client-description { display:none; } }
 @media(max-width:640px) { .xinaski-page { padding-left:48px; } .editorial-hero { min-height:90svh; } .hero-topline span:last-child,.hero-footerline span:last-child { display:none; } .editorial-hero h1 { font-size:clamp(48px,12.4vw,78px); margin:26px 0; } .hero-center { padding:80px 0 40px; } .hero-bottom p { font-size:15px; } .round-arrow { width:50px; height:50px; flex-shrink:0; } .editorial-section { padding:75px 0 85px; } .section-heading span:last-child { display:none; } .editorial-section h2 { font-size:clamp(46px,11vw,75px); } .work-intro,.expertise-intro { display:block; } .work-intro p,.expertise-intro p { margin-top:25px; } .work-grid { gap:12px; } .work-item,.work-item-0,.work-item-1,.work-item-4,.work-item-5 { grid-column:span 12; } .work-item figcaption { padding-bottom:12px; } .clients-section h2 { margin-bottom:45px; } .client-row { gap:8px; grid-template-columns:25px 1fr 18px; } .client-date { display:none; } .capability { grid-template-columns:1fr 22px; } .capability p { grid-column:1/-1; grid-row:2; } }
+
+
+/* Concept E — single-family geometric typography and graphic yellow disc */
+:root { --accent: #ffe100; }
+.xinaski-page { font-family: Inter, Arial, sans-serif; }
+.editorial-hero { padding-top: 28px; }
+.hero-center { padding-top: clamp(75px,10vh,135px); padding-bottom: 38px; }
+.hero-type-composition { position: relative; isolation: isolate; }
+.hero-type-composition h1 { position: relative; z-index: 1; margin: 0; font-size: clamp(62px,10.4vw,205px); line-height: .85; letter-spacing: -.085em; font-weight: 850; text-transform: none; }
+.hero-yellow-disc { position:absolute; z-index:0; width: clamp(170px,28vw,460px); aspect-ratio:1; border-radius:50%; background:var(--accent); right:clamp(-35px,1vw,20px); top: 12%; animation: disc-arrive 1s cubic-bezier(.2,.8,.2,1) both; }
+.hero-period { color:var(--accent); text-shadow:1px 1px 0 #e5b700; }
+.hero-specialties { font-size:clamp(15px,1.65vw,25px); letter-spacing:-.03em; margin: 28px 0 0; }
+.hero-bottom-e { margin-top: 25px; }
+.hero-intro { display:flex; flex-direction:column; align-items:flex-start; gap:22px; }
+.hero-rule { display:block; width:45px; height:1px; background:var(--ink); }
+.hero-intro p { font-size:clamp(15px,1.3vw,19px); max-width:450px; line-height:1.45; }
+.hero-project-link { font-size:11px; font-weight:850; letter-spacing:.06em; display:flex; align-items:center; gap:20px; padding:8px 0; }
+.hero-project-link span { font-size:32px; line-height:.6; transition:transform .25s; }
+.hero-project-link:hover span { transform:translateX(9px); }
+.hero-services { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid #d0d0ce; padding-top:25px; }
+.hero-services div { display:flex; flex-direction:column; gap:5px; padding:0 25px; border-left:1px solid #d0d0ce; font-size:14px; font-weight:400; letter-spacing:normal; line-height:1.35; }
+.hero-services div:first-child { border-left:0; padding-left:0; }
+.hero-services b { font-size:24px; color:#bdbdbd; font-weight:700; }
+.hero-services strong { font-size:clamp(18px,2vw,29px); letter-spacing:-.05em; line-height:1.05; font-weight:800; }
+.editorial-section h2 { font-family:Inter,Arial,sans-serif; font-weight:850; letter-spacing:-.075em; }
+.editorial-section h2 .type-accent { font:inherit; letter-spacing:inherit; }
+@keyframes disc-arrive { from { opacity:0; transform:translate(30px,15px) scale(.9); } to { opacity:1; transform:translate(0,0) scale(1); } }
+@media(max-width:900px) { .hero-type-composition h1 { font-size:clamp(59px,10vw,115px); } .hero-yellow-disc { right:-10px; top:14%; width:32vw; } }
+@media(max-width:640px) { .editorial-hero { min-height:100svh; } .hero-center { padding:85px 0 40px; } .hero-type-composition h1 { font-size:clamp(43px,10.3vw,70px); letter-spacing:-.085em; } .hero-yellow-disc { width:37vw; right:-10px; top:17%; } .hero-specialties { font-size:13px; line-height:1.4; margin-top:24px; } .hero-services { gap:12px; } .hero-services div { padding:0 8px; font-size:10px; } .hero-services b { font-size:17px; } .hero-services strong { font-size:13px; } .hero-intro p { font-size:14px; } }
+@media(prefers-reduced-motion:reduce) { .hero-yellow-disc { animation:none; } }
