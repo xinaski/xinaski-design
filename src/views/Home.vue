@@ -11,9 +11,9 @@ onMounted(async () => {
 const translatedCustomers = computed(() => customers.value.map(c => ({...c, description: c.description?.[locale.value] || c.description?.en || ''})));
 const portfolioImages = ['portfolio08.png','portfolio02.png','portfolio03.png','portfolio04.png','portfolio05.png','portfolio01.png'];
 const personalProjects = [
-  { name: 'DIUMENGE', description: 'A personal space for photography, writing and everything in between.', url: 'https://diumenge.cat/', visual: 'diumenge', mark: 'DIUMENGE.' },
-  { name: 'Soroll de fons', description: 'Music, stories and playlists with a life of their own.', url: 'https://soroll-de-fons.xinaski.com/', visual: 'soroll', mark: 'SOROLL DE FONS.' },
-  { name: 'Fora de màquina', description: 'Functional training, without machines or unnecessary complications.', url: 'https://fora-de-maquina.vercel.app/', visual: 'fora', mark: 'FORA DE MÀQUINA.' }
+  { name: 'DIUMENGE', description: 'A personal space for photography, writing and everything in between.', url: 'https://diumenge.cat/', visual: 'diumenge', logo: '/logos/logo-diumenge.svg' },
+  { name: 'Soroll de fons', description: 'Music, stories and playlists with a life of their own.', url: 'https://soroll-de-fons.xinaski.com/', visual: 'soroll', logo: '/logos/logo-soroll.svg' },
+  { name: 'Fora de màquina', description: 'Functional training, without machines or unnecessary complications.', url: 'https://fora-de-maquina.vercel.app/', visual: 'fora', logo: '/logos/logo-fm.svg' }
 ];
 const capabilities = [
   { title: '01 / UX & PRODUCT', detail: 'Research · Strategy · Prototyping · Design systems', icons: [
@@ -89,7 +89,7 @@ const capabilities = [
           <a v-for="(project, i) in personalProjects" :key="project.name" :href="project.url" target="_blank" rel="noopener noreferrer" class="personal-card">
             <div class="personal-art" :class="'personal-art--' + project.visual">
               <span class="personal-art-index">0{{ i + 1 }} / PERSONAL</span>
-              <strong>{{ project.mark }}</strong>
+              <img class="personal-logo" :src="project.logo" :alt="project.name + ' logo'" loading="lazy">
               <span class="personal-art-arrow" aria-hidden="true">↗</span>
             </div>
             <div class="personal-card-info">
