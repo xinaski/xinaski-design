@@ -203,3 +203,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
  .hero-type-composition h1 { font-size:clamp(39px,9.1vw,66px); line-height:.98; }
  .editorial-section h2 { font-size:clamp(39px,9vw,65px); }
 }
+
+/* Minimal hero revision: remove decorative yellow disc and period shadow */
+.hero-yellow-disc { display: none; }
+.hero-period { text-shadow: none; }
