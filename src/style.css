@@ -298,3 +298,24 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
  .about-section .about-details { grid-column:1; }
  .about-section .about-details .about-description { font-size:16px; line-height:1.8; gap:25px; }
 }
+
+
+/* Restore approved About proportions from screenshot; neutralize oversized image. */
+.about-section .about-grid { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); column-gap:clamp(36px,5vw,85px); row-gap:clamp(36px,4vw,65px); align-items:center; }
+.about-section .about-visual { min-height:0; max-height:none; display:flex; align-items:center; justify-content:center; overflow:visible; background:transparent; }
+.about-section .about-visual img { width:100%; height:auto; max-height:350px; object-fit:contain; object-position:center; filter:none; }
+.about-section .about-copy h2 { font-size:clamp(42px,4.2vw,68px); line-height:1.06; }
+.about-section .about-details { width:min(100%,760px); }
+.about-section .about-details .about-description { font-size:clamp(15px,1.3vw,18px); line-height:1.75; gap:22px; }
+.about-section .about-details .about-actions { margin-top:36px; }
+@media(max-width:900px) {
+ .about-section .about-grid { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:40px 26px; }
+ .about-section .about-visual img { max-height:300px; }
+ .about-section .about-copy h2 { font-size:clamp(34px,5vw,50px); }
+}
+@media(max-width:640px) {
+ .about-section .about-grid { grid-template-columns:1fr; gap:30px; }
+ .about-section .about-visual img { max-height:310px; }
+ .about-section .about-copy h2 { font-size:clamp(36px,8.7vw,55px); }
+ .about-section .about-details { grid-column:1; }
+}
