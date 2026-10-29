@@ -9,16 +9,17 @@
     "customers-title": "Clients",
     "customers-subtitle": "Who have I worked for?",
     "skills-title": "Skills",
-    "skills-subtitle": "What have I used?"
+    "skills-subtitle": "What have I used?",
+    "personal-title": "Personal projects"
   },
   "home": {
     "welcome": "I make <span class='text-yellow-300'>awesome</span> designs",
     "description": "UX/UI design, Prototypes & frontend development."
   },
   "about": {
-    "description01": "I'm <strong class='text-black'>Marc Zamora</strong>, a Barcelona-born designer and developer with a passion for visual storytelling and digital experiences. Based in Mataró, I specialize in graphic design as a powerful form of visual communication, blending creativity with functionality.",
-    "description02": "With years of experience in digital design, my work focuses on <strong class='text-black'>web and mobile interfaces</strong>, <strong class='text-black'>banner campaigns</strong>, and <strong class='text-black'>user-centered design</strong>. I have a strong interest in <strong class='text-black'>UX</strong> methodologies and techniques, ensuring that every project is both visually compelling and highly intuitive. On the technical side, I frequently work with <strong class='te xt-black'>Vue</strong> to bring seamless, responsive front-end experiences to life.",
-    "description03": "Beyond design and development, I'm a firm believer that great ideas start with great <strong class='text-black'>coffee</strong>. Let's connect and create something meaningful.",
+    "description01": "I'm <strong>Marc Zamora</strong>, a designer and developer from Barcelona, now based in Mataró. I create digital experiences where visual character and usability work together.",
+    "description02": "My work spans <strong>UX/UI, product design and frontend development</strong> — from shaping ideas and designing interfaces to building them. I care about clarity, detail and how things actually feel to use.",
+    "description03": "I like good ideas, straightforward collaboration and, preferably, good coffee. Have something in mind? Let's talk.",
     "description04": "",
     "description05": "",
     "cta-01": "Feel free to say hello via",
@@ -26,10 +27,8 @@
     "cta-02": "Also, you can download my CV",
     "cta-cv": "here"
   },
-  "portfolio": {
-  },
-  "customers": {
-  },
+  "portfolio": {},
+  "customers": {},
   "skills": {
     "skills-01": "Frontend",
     "skills-02": "Parsers and Processors",
@@ -40,5 +39,74 @@
   "contact": {
     "title": "Contacte",
     "description": "Si vols posar-te en contacte amb mi, omple el formulari."
+  },
+  "editorial": {
+    "nav": "Personal projects",
+    "heroTop": "INDEPENDENT DESIGNER / DEVELOPER",
+    "heroTitle": [
+      "Design",
+      "with",
+      "character"
+    ],
+    "view": "VIEW PROJECTS",
+    "services": [
+      "Product",
+      "Ideas, design and strategy<br>for digital products.",
+      "Visual design",
+      "Identity, interfaces<br>and graphic systems.",
+      "Frontend",
+      "Modern development<br>and real performance."
+    ],
+    "aboutK": "THE PERSON BEHIND THE PIXELS",
+    "hello": "HELLO, I'M MARC.",
+    "aboutTitle": [
+      "Good design",
+      "is never",
+      "an accident."
+    ],
+    "talk": "LET'S TALK",
+    "cv": "DOWNLOAD CV",
+    "selected": "SELECTED VISUAL WORK",
+    "workTitle": [
+      "Made to",
+      "be seen."
+    ],
+    "workDesc": [
+      "Design is not decoration.",
+      "It's how ideas take shape."
+    ],
+    "selectedWork": "SELECTED WORK",
+    "personal": "PERSONAL PROJECTS",
+    "beyond": "BEYOND THE CLIENT BRIEF",
+    "personalTitle": [
+      "Beyond",
+      "the brief."
+    ],
+    "descs": [
+      "A personal space for photography, writing and everything in between.",
+      "Music, stories and playlists with a life of their own.",
+      "Functional training, without machines or unnecessary complications."
+    ],
+    "people": "PEOPLE & BRANDS",
+    "clientsTitle": [
+      "Good work.",
+      "Good company."
+    ],
+    "skillsK": "WHAT I BRING TO THE TABLE",
+    "skillsTitle": [
+      "Ideas.",
+      "Tools.",
+      "Instinct."
+    ],
+    "skillsDesc": "From the first sketch to the last line of code.",
+    "capDetails": [
+      "Research · Strategy · Prototyping · Design systems",
+      "Vue · HTML · CSS · JavaScript · WordPress",
+      "Art direction · Identity · Editorial · Digital"
+    ],
+    "made": "MADE BY",
+    "rights": "All rights reserved.",
+    "menuOpen": "Menu",
+    "menuClose": "Close"
   }
 }

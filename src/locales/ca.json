@@ -9,16 +9,17 @@
     "customers-title": "Clients",
     "customers-subtitle": "Per a quí he treballat?",
     "skills-title": "Habilitats",
-    "skills-subtitle": "Què he utilitzat?"
+    "skills-subtitle": "Què he utilitzat?",
+    "personal-title": "Projectes personals"
   },
   "home": {
     "welcome": "Faig dissenys amb <span class='text-yellow-300'>flow</span>",
     "description": "Disseny UX/UI, prototips i desenvolupament frontend."
   },
   "about": {
-    "description01": "Sóc en <strong class='text-black'>Marc Zamora</strong>, un dissenyador i desenvolupador nascut a Barcelona amb passió per la narrativa visual i les experiències digitals. Basat a Mataró, estic especialitzat en el disseny gràfic com una poderosa forma de comunicació visual, combinant creativitat i funcionalitat.",
-    "description02": "Amb anys d'experiència en disseny digital, la meva feina se centra en <strong class='text-black'>interfícies web i mòbils</strong>, <strong class='text-black'>campanyes de banners</strong> i <strong class='text-black'>disseny centrat en l'usuari</strong>. Tinc un gran interès en metodologies i tècniques de <strong class='text-black'>UX</strong>, assegurant que cada projecte sigui tant visualment atractiu com intuïtiu. En l'àmbit tècnic, treballo sovint amb <strong class='text-black'>Vue</strong> per donar vida a experiències front-end fluides i responsives.",
-    "description03": "Més enllà del disseny i el desenvolupament, crec fermament que les grans idees comencen amb un bon <strong class='text-black'>cafè</strong>. Connectem i creem alguna cosa significativa.",
+    "description01": "Soc en <strong>Marc Zamora</strong>, dissenyador i desenvolupador de Barcelona, actualment establert a Mataró. Creo experiències digitals on el caràcter visual i la facilitat d'ús van de bracet.",
+    "description02": "Treballo en <strong>UX/UI, disseny de producte i desenvolupament frontend</strong>: des de donar forma a les idees i dissenyar interfícies fins a construir-les. M'importen la claredat, els detalls i com se sent realment fer servir un producte.",
+    "description03": "M'agraden les bones idees, la col·laboració sense complicacions i, si pot ser, un bon cafè. Tens alguna cosa al cap? Parlem-ne.",
     "description04": "",
     "description05": "",
     "cta-01": "No dubtis a saludar-me per",
@@ -26,10 +27,8 @@
     "cta-02": "A més, pots descarregar el meu CV",
     "cta-cv": "aquí"
   },
-  "portfolio": {
-  },
-  "customers": {
-  },
+  "portfolio": {},
+  "customers": {},
   "skills": {
     "skills-01": "Frontend",
     "skills-02": "Parsers i Processadors",
@@ -40,5 +39,74 @@
   "contact": {
     "title": "Contacte",
     "description": "Si vols posar-te en contacte amb mi, omple el formulari."
+  },
+  "editorial": {
+    "nav": "Projectes personals",
+    "heroTop": "DISSENYADOR / DESENVOLUPADOR INDEPENDENT",
+    "heroTitle": [
+      "Disseny",
+      "amb",
+      "caràcter"
+    ],
+    "view": "VEURE PROJECTES",
+    "services": [
+      "Producte",
+      "Idees, disseny i estratègia<br>per a productes digitals.",
+      "Disseny visual",
+      "Identitat, interfícies<br>i sistemes gràfics.",
+      "Frontend",
+      "Desenvolupament modern<br>i rendiment real."
+    ],
+    "aboutK": "LA PERSONA DARRERE ELS PÍXELS",
+    "hello": "HOLA, SOC EN MARC.",
+    "aboutTitle": [
+      "El bon disseny",
+      "mai és",
+      "casualitat."
+    ],
+    "talk": "PARLEM",
+    "cv": "DESCARREGA EL CV",
+    "selected": "PROJECTES VISUALS SELECCIONATS",
+    "workTitle": [
+      "Fet per",
+      "ser vist."
+    ],
+    "workDesc": [
+      "El disseny no és decoració.",
+      "És com les idees prenen forma."
+    ],
+    "selectedWork": "PROJECTE SELECCIONAT",
+    "personal": "PROJECTES PERSONALS",
+    "beyond": "MÉS ENLLÀ DEL BRIEF DEL CLIENT",
+    "personalTitle": [
+      "Més enllà",
+      "del brífing."
+    ],
+    "descs": [
+      "Un espai personal per a la fotografia, els textos i tot el que hi ha entremig.",
+      "Música, històries i llistes de reproducció amb vida pròpia.",
+      "Entrenament funcional, sense màquines ni complicacions innecessàries."
+    ],
+    "people": "PERSONES I MARQUES",
+    "clientsTitle": [
+      "Bona feina.",
+      "Bona companyia."
+    ],
+    "skillsK": "EL QUE APORTO",
+    "skillsTitle": [
+      "Idees.",
+      "Eines.",
+      "Instint."
+    ],
+    "skillsDesc": "Del primer esbós a l'última línia de codi.",
+    "capDetails": [
+      "Recerca · Estratègia · Prototips · Sistemes de disseny",
+      "Vue · HTML · CSS · JavaScript · WordPress",
+      "Direcció d'art · Identitat · Editorial · Digital"
+    ],
+    "made": "FET PER",
+    "rights": "Tots els drets reservats.",
+    "menuOpen": "Menú",
+    "menuClose": "Tanca"
   }
 }

@@ -1,272 +1,134 @@
 <script setup>
-  import Footer from '../components/Footer.vue';
-  import { ref, onMounted, computed } from "vue";
-  import { useI18n } from "vue-i18n";
-  import CustomerBox from "../components/CustomerBox.vue";
-
-  const { locale } = useI18n();
-  const customers = ref([]);
-
-  onMounted(async () => {
-    try {
-      const response = await fetch("/data/customers.json");
-      const data = await response.json();
-      customers.value = data; // NO cal fer data.customers si el JSON és un array directe
-    } catch (error) {
-      console.error("Error carregant el JSON:", error);
-    }
-  });
-
-  // Retorna només la informació en l'idioma seleccionat
-  const translatedCustomers = computed(() =>
-    customers.value.map(customer => ({
-      id: customer.id,
-      title: customer.title, // No canviem res aquí, perquè és un string directe
-      description: customer.description[locale.value], // Traducció correcta
-      url: customer.url,
-      date: customer.date,
-    })) // Aquesta coma és necessària
-  );
-
-  const downloadPDF = () => {
-    const pdfUrl = "/pdf/marczamora-cv.pdf"; // url
-    fetch(pdfUrl)
-      .then(response => response.blob())
-      .then(blob => {
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "marczamora-cv.pdf"; // Nom correcte del fitxer
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        window.URL.revokeObjectURL(url);
-      })
-      .catch(error => console.error("Error descarregant el PDF:", error));
-  };
+import { ref, onMounted, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import Footer from '../components/Footer.vue';
+const { locale, t } = useI18n();
+const customers = ref([]);
+onMounted(async () => {
+  try { const response = await fetch('/data/customers.json'); if (!response.ok) throw new Error(response.status); customers.value = await response.json(); }
+  catch (error) { console.error('Error carregant clients', error); }
+});
+const translatedCustomers = computed(() => customers.value.map(c => ({...c, description: c.description?.[locale.value] || c.description?.en || ''})));
+const portfolioImages = ['portfolio08.png','portfolio02.png','portfolio03.png','portfolio04.png','portfolio05.png','portfolio01.png'];
+const personalProjects = [
+  { name: 'DIUMENGE', descriptionKey: 0, url: 'https://diumenge.cat/', visual: 'diumenge', logo: '/logos/logo-diumenge.svg' },
+  { name: 'Soroll de fons', descriptionKey: 1, url: 'https://soroll-de-fons.xinaski.com/', visual: 'soroll', logo: '/logos/logo-soroll.svg' },
+  { name: 'Fora de màquina', descriptionKey: 2, url: 'https://fora-de-maquina.vercel.app/', visual: 'fora', logo: '/logos/logo-fm.svg' }
+];
+const e = key => t('editorial.' + key);
+const capabilities = [
+  { title: '01 / UX & PRODUCT', detail: 'Research · Strategy · Prototyping · Design systems', icons: [
+    ['Figma','figma/figma-original.svg'], ['Affinity Designer','/skills/affinity.png'], ['Sketch','sketch/sketch-original.svg'],
+    ['Photoshop','/skills/adobe-photoshop.svg'], ['Illustrator','/skills/adobe-illustrator.svg'], ['InDesign','/skills/adobe-indesign.svg'],
+    ['Premiere Pro','premierepro/premierepro-original.svg'], ['XD','/skills/adobe-xd.svg'], ['InVision','/skills/invision-icon.svg']
+  ] },
+  { title: '02 / FRONTEND', detail: 'Vue · HTML · CSS · JavaScript · WordPress', icons: [
+    ['Ant Design','/skills/ant-design.svg'], ['HTML5','html5/html5-original.svg'], ['CSS3','css3/css3-original.svg'], ['JavaScript','javascript/javascript-original.svg'],
+    ['jQuery','jquery/jquery-original.svg'], ['Ruby','ruby/ruby-original.svg'], ['Angular','angular/angular-original.svg'],
+    ['Vue','vuejs/vuejs-original.svg'], ['Tailwind CSS','tailwindcss/tailwindcss-original.svg'], ['Bootstrap','bootstrap/bootstrap-original.svg'],
+    ['WordPress','/skills/wordpress-icon-alt.svg'],
+    ['Sass','sass/sass-original.svg'], ['Less','less/less-plain-wordmark.svg']
+  ] },
+  { title: '03 / VISUAL DESIGN', detail: 'Art direction · Identity · Editorial · Digital', icons: [] }
+];
 </script>
 
-
 <template>
-
-  <header id="home" class="ml-12 md:ml-16">
-    <div class="pt-10 md:pt-0 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24">
-      <div class="flex h-96 md:h-screen">
-        <div class="m-auto">
-          <div class="w-full space-y-4 lg:space-y-10">
-            <div class="pb-8">
-              <p class="inline-block mb-4 text-xs font-bold text-black uppercase font-stretch-extra-expanded">
-                # {{ $t('navbar.home-title') }}
-              </p>
-              <hr class="w-10 border-1">
-            </div>
-            <h2 class="font-sans text-5xl font-extrabold text-gray-950 sm:text-8xl font-stretch-extra-expanded leading-10 md:leading-20"
-              v-html="$t('home.welcome')">
-            </h2>
-            <p class="text-lg text-black md:text-2xl font-stretch-expanded">
-              {{ $t('home.description') }}
-            </p>
-          </div>
+  <div class="xinaski-page">
+    <header id="home" class="editorial-hero">
+      <div class="hero-topline"><span>{{ e('heroTop') }}</span><span>BARCELONA · CATALUNYA</span></div>
+      <div class="hero-center">
+        <div class="hero-type-composition">
+          <span class="hero-yellow-disc" aria-hidden="true"></span>
+          <h1>{{ e('heroTitle.0') }}<br>{{ e('heroTitle.1') }}<br>{{ e('heroTitle.2') }}<span class="hero-period">.</span></h1>
+        </div>
+        <p class="hero-specialties">UX/UI · Product Design · Frontend Development</p>
+        <div class="hero-bottom hero-bottom-e">
+          <div class="hero-intro"><span class="hero-rule"></span><a href="#portfolio" class="hero-project-link"><span>⟶</span> {{ e('view') }}</a></div>
         </div>
       </div>
-    </div>
-  </header>
+      <div class="hero-footerline hero-services"><div><b>01</b><strong>{{ e('services.0') }}</strong><span v-html="e('services.1')"></span></div><div><b>02</b><strong>{{ e('services.2') }}</strong><span v-html="e('services.3')"></span></div><div><b>03</b><strong>{{ e('services.4') }}</strong><span v-html="e('services.5')"></span></div></div>
+    </header>
 
-  <main class="pl-16 md:pl-20 pr-4">
-
-    <section id="about" class="relative">
-      <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
-        <div class="">
-          <img class="md:hidden w-full pb-10 px-10 sm:px-20 mx-auto" 
-            src="/about/imgabout01.png" alt="about image" />
-          <div class="w-full md:w-4/6 space-y-4 md:pr-16 lg:pr-0">
-            <div class="pb-8">
-              <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-                #2 {{ $t('navbar.about-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.about-subtitle') }}</span>
-              </p>
-              <hr class="w-10 border-1">
+    <main class="editorial-main">
+      <section id="about" class="editorial-section about-section">
+        <div class="section-heading"><span>01 / {{ t('navbar.about-title') }}</span><span>{{ e('aboutK') }}</span></div>
+        <div class="about-grid">
+          <div class="about-visual"><img src="/about/imgabout01.png" alt="Marc Zamora — portrait" loading="lazy"></div>
+          <div class="about-copy">
+            <p class="eyebrow">{{ e('hello') }}</p>
+            <h2>{{ e('aboutTitle.0') }}<br><span class="type-accent">{{ e('aboutTitle.1') }}</span><br>{{ e('aboutTitle.2') }}</h2>
+          </div>
+          <div class="about-details">
+            <div class="about-description">
+              <p v-html="t('about.description01') + ' ' + t('about.description02')"></p>
+              <p v-html="t('about.description03')"></p>
             </div>
-            <div class="space-y-3 font-stretch-expanded text-sm">
-              <p class="text-gray-600" v-html="$t('about.description01')"></p>
-              <p class="text-gray-600" v-html="$t('about.description02')"></p>
-              <p class="text-gray-600" v-html="$t('about.description03')"></p>
-              <p class="text-gray-600" v-html="$t('about.description04')"></p>
-              <p class="text-gray-600" v-html="$t('about.description05')"></p>
-            </div>
-            <div class="space-y-1 pt-8">
-              <p class="md:text-lg text-gray-950 font-stretch-expanded">
-                {{ $t('about.cta-01') }}
-                <a class="text-yellow-300 font-bold" href="mailto:xinasking@gmail.com">
-                  {{ $t('about.cta-email') }}
-                </a>
-              </p>
-              <p class="md:text-lg text-gray-950 font-stretch-expanded">
-                {{ $t('about.cta-02') }}
-                <button class="text-yellow-300 font-bold" @click="downloadPDF">
-                  {{ $t('about.cta-cv') }}
-                </button>
-              </p>
+            <div class="about-actions">
+              <a href="mailto:xinasking@gmail.com" class="text-action">{{ e('talk') }} <span>↗</span></a>
+              <a href="/pdf/marczamora-cv.pdf" download="marczamora-cv.pdf" class="text-action">{{ e('cv') }} <span>↓</span></a>
             </div>
           </div>
         </div>
-      </div>
-      <img class="absolute hidden md:block top-0 md:right-0 lg:right-0 xl:right-30 2xl:right-60" 
-        src="/about/imgabout01.png" alt="about image" />
-    </section>
+      </section>
 
-    <section id="portfolio">
-      <div class="py-20 mx-auto sm:max-w-xl md:max-w-full lg:pt-60 lg:pb-40">
-        <div class="w-full mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-          <div class="pb-16">
-            <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-              #3 {{ $t('navbar.portfolio-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.portfolio-subtitle') }}</span>
-            </p>
-            <hr class="w-10 border-1">
-          </div>
+      <section id="portfolio" class="editorial-section work-section">
+        <div class="section-heading"><span>02 / {{ t('navbar.portfolio-title') }}</span><span>{{ e('selected') }}</span></div>
+        <div class="work-intro"><h2>{{ e('workTitle.0') }}<br><span class="type-accent">{{ e('workTitle.1') }}</span></h2><p>{{ e('workDesc.0') }}<br>{{ e('workDesc.1') }}</p></div>
+        <div class="work-grid">
+          <figure v-for="(img, i) in portfolioImages" :key="img" class="work-item" :class="'work-item-' + i">
+            <div class="work-image"><img :src="'/portfolio/' + img" :alt="'Portfolio visual ' + (i + 1)" loading="lazy"></div>
+            <figcaption><span>{{ e('selectedWork') }} / 0{{ i + 1 }}</span><span>↗</span></figcaption>
+          </figure>
         </div>
-        <div class="grid md:grid-cols-7 md:gap-4">
-          <div class="md:col-span-3 space-y-4 pb-4">
-            <div class="grid grid-col-2 grid-cols-2 gap-4">
-              <div>
-                <img class="object-cover w-full rounded-lg" src="/portfolio/portfolio02.png" alt="">
-              </div>
-              <div>
-                <img class="object-cover w-full rounded-lg" src="/portfolio/portfolio03.png" alt="">
-              </div>
-            </div>
-            <div class="grid gap-4">
-              <img class="object-cover w-full rounded-lg h-40 md:h-80" src="/portfolio/portfolio04.png" alt="">
-            </div>
-          </div>
-          <div class="col-span-4 pb-4">
-            <img class="object-cover h-full rounded-lg" src="/portfolio/portfolio08.png" alt="">
-          </div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-7 gap-4">
-          <div class="md:col-span-4 h-40 md:h-96">
-            <img class="object-cover h-40 md:h-96 w-full rounded-lg" src="/portfolio/portfolio05.png" alt="">
-          </div>
-          <div class="md:col-span-3 h-40 md:h-96">
-            <img class="object-cover h-40 md:h-96 w-full rounded-lg" src="/portfolio/portfolio01.png" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="customers">
-      <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
-        <div class="pb-10">
-          <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-            #4 {{ $t('navbar.customers-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.customers-subtitle') }}</span>
-          </p>
-          <hr class="w-10 border-1">
+      <section id="personal-projects" class="editorial-section personal-section">
+        <div class="section-heading"><span>03 / {{ t('navbar.personal-title') }}</span><span>{{ e('beyond') }}</span></div>
+        <h2>{{ e('personalTitle.0') }}<br><span class="type-accent">{{ e('personalTitle.1') }}</span></h2>
+        <div class="personal-grid">
+          <a v-for="(project, i) in personalProjects" :key="project.name" :href="project.url" target="_blank" rel="noopener noreferrer" class="personal-card">
+            <div class="personal-art" :class="'personal-art--' + project.visual">
+              <span class="personal-art-index">0{{ i + 1 }} / PERSONAL</span>
+              <img class="personal-logo" :src="project.logo" :alt="project.name + ' logo'" loading="lazy">
+              <span class="personal-art-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="personal-card-info">
+              <div class="personal-card-heading"><h3>{{ project.name }}</h3></div>
+              <p>{{ e('descs.' + project.descriptionKey) }}</p>
+            </div>
+          </a>
         </div>
-        <div class="max-w-screen-xl sm:mx-auto">
-          <div class="grid gap-8 row-gap-8 sm:row-gap-0 sm:grid-cols-2">
-            <CustomerBox
-              v-for="customer in translatedCustomers"
-              :key="customer.id"
-              :title="customer.title"
-              :description="customer.description"
-              :url="customer.url"
-              :date="customer.date"
-            />
-          </div>
-        </div>
-      </div>  
-    </section>
+      </section>
 
-    <section id="skills">
-      <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20">
-        <div class="pb-10">
-          <p class="inline-block mb-4 text-xs font-bold text-black font-stretch-extra-expanded">
-            #5 {{ $t('navbar.skills-title') }}<span class="text-gray-400 pl-2">{{ $t('navbar.skills-subtitle') }}</span>
-          </p>
-          <hr class="w-10 border-1">
+      <section id="customers" class="editorial-section clients-section">
+        <div class="section-heading"><span>04 / {{ t('navbar.customers-title') }}</span><span>{{ e('people') }}</span></div>
+        <h2>{{ e('clientsTitle.0') }}<br><span class="type-accent">{{ e('clientsTitle.1') }}</span></h2>
+        <div class="clients-list">
+          <a v-for="(customer, i) in translatedCustomers" :key="customer.id || i" :href="customer.url || '#customers'" :target="customer.url ? '_blank' : undefined" :rel="customer.url ? 'noopener noreferrer' : undefined" class="client-row">
+            <span class="client-index">{{ String(i + 1).padStart(2,'0') }}</span>
+            <span class="client-name">{{ customer.title }}</span>
+            <span class="client-description">{{ customer.description }}</span>
+            <span class="client-date">{{ customer.date }}</span>
+            <span class="client-arrow">↗</span>
+          </a>
         </div>
-        <div class="max-w-screen-xl sm:mx-auto space-y-12">
-          <div class="space-y-4">
-            <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              {{ $t('skills.skills-01') }}
-            </h6>
-            <div class="flex flex-wrap justify-start items-center gap-6">
-              <img src="/skills/frontend/html5.svg" class="h-12"/>
-              <img src="/skills/frontend/css-3.svg" class="h-12"/>
-              <img src="/skills/frontend/javascript.svg" class="h-12"/>
-              <img src="/skills/frontend/jquery.svg" class="h-12"/>
-              <img src="/skills/frontend/ruby.svg" class="h-12"/>
-              <img src="/skills/frontend/angular.svg" class="h-12"/>
-              <img src="/skills/frontend/vue.svg" class="h-12"/>
-              <img src="/skills/frontend/tailwind.svg" class="h-10"/>
-              <img src="/skills/frontend/bootstrap.svg" class="h-12"/>
-              <img src="/skills/frontend/material.svg" class="h-12"/>
-              <img src="/skills/frontend/ionic.svg" class="h-12"/>
-              <img src="/skills/frontend/hubspot.svg" class="h-12"/>
-              <img src="/skills/frontend/wordpress.svg" class="h-12"/>
-              <img src="/skills/frontend/shopify.svg" class="h-12"/>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              {{ $t('skills.skills-02') }}
-            </h6>
-            <div class="flex flex-wrap justify-start items-center gap-6">
-              <img src="/skills/parsers/haml.svg" class="h-12"/>
-              <img src="/skills/parsers/sass.svg" class="h-12"/>
-              <img src="/skills/parsers/less.svg" class="h-12"/>
-              <img src="/skills/parsers/bem.svg" class="h-12"/>
-              <img src="/skills/parsers/atomicdesign.svg" class="h-12"/>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              {{ $t('skills.skills-03') }}
-            </h6>
-            <div class="flex flex-wrap justify-start items-center gap-6">
-              <img src="/skills/markup/xml-file.svg" class="h-12"/>
-              <img src="/skills/markup/json.svg" class="h-12"/>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              {{ $t('skills.skills-04') }}
-            </h6>
-            <div class="flex flex-wrap justify-start items-center gap-6">
-              <img src="/skills/designtools/photoshop.svg" class="h-12"/>
-              <img src="/skills/designtools/illustrator.svg" class="h-12"/>
-              <img src="/skills/designtools/indesign.svg" class="h-12"/>
-              <img src="/skills/designtools/figma.svg" class="h-12"/>
-              <img src="/skills/designtools/sketch.svg" class="h-12"/>
-              <img src="/skills/designtools/premiere.svg" class="h-12"/>
-              <img src="/skills/designtools/adobexd.svg" class="h-12"/>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <h6 class="font-bold leading-5 font-stretch-extra-expanded">
-              {{ $t('skills.skills-05') }}
-            </h6>
-            <div class="flex flex-wrap justify-start items-center gap-6">
-              <img src="/skills/mockuptools/figma.svg" class="h-12"/>
-              <img src="/skills/mockuptools/invision.svg" class="h-12"/>
-              <img src="/skills/mockuptools/proto-io.svg" class="h-12"/>
+      </section>
+
+      <section id="skills" class="editorial-section expertise-section">
+        <div class="section-heading"><span>05 / {{ t('navbar.skills-title') }}</span><span>{{ e('skillsK') }}</span></div>
+        <div class="expertise-intro"><h2>{{ e('skillsTitle.0') }}<br>{{ e('skillsTitle.1') }}<br><span class="type-accent">{{ e('skillsTitle.2') }}</span></h2><p>{{ e('skillsDesc') }}</p></div>
+        <div class="capability-list">
+          <div v-for="cap in capabilities" :key="cap.title" class="capability">
+            <h3>{{ cap.title }}</h3>
+            <p>{{ e('capDetails.' + capabilities.indexOf(cap)) }}</p>
+            <div v-if="cap.icons.length" class="capability-icons">
+              <img v-for="icon in cap.icons" :key="icon[0]" :src="icon[1].startsWith('/') ? icon[1] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + icon[1]" :alt="icon[0]" :title="icon[0]" loading="lazy">
             </div>
           </div>
         </div>
-      </div>  
-    </section>
-
-    <Footer />
-
-  </main>
-
+      </section>
+      <Footer />
+    </main>
+  </div>
 </template>
-
-<style scoped>
-  .font-stretch-extra-expanded {
-    font-stretch: extra-expanded !important;
-  }
-  .font-stretch-expanded {
-    font-stretch: expanded !important;
-  }
-</style>
-  
