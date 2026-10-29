@@ -275,7 +275,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 }
 .about-section .about-copy { align-self:center; justify-self:start; }
 .about-section .about-copy h2 {
-  font-family:'Inter',ui-sans-serif,system-ui,sans-serif;
+  font-family: 'Zalando Sans Expanded', 'Inter', sans-serif;
   font-weight:800;
   font-size:clamp(43px,4.2vw,70px);
   line-height:1.06;
@@ -324,7 +324,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .editorial-section.work-section { padding-top:106px; padding-bottom:180px; }
   .work-section .section-heading { margin-bottom:100px; }
   .work-section .work-intro h2 {
-    font-family:'Inter',ui-sans-serif,system-ui,sans-serif;
+    font-family: 'Zalando Sans Expanded', 'Inter', sans-serif;
     font-size:clamp(43px,4.2vw,70px);
     font-weight:800;
     line-height:1.06;
@@ -338,7 +338,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .editorial-section.clients-section { padding-top:106px; padding-bottom:180px; }
   .clients-section .section-heading { margin-bottom:100px; }
   .clients-section > h2 {
-    font-family:'Inter',ui-sans-serif,system-ui,sans-serif;
+    font-family: 'Zalando Sans Expanded', 'Inter', sans-serif;
     font-size:clamp(43px,4.2vw,70px);
     font-weight:800;
     line-height:1.06;
@@ -352,7 +352,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .editorial-section.expertise-section { padding-top:106px; padding-bottom:180px; }
   .expertise-section .section-heading { margin-bottom:100px; }
   .expertise-section .expertise-intro h2 {
-    font-family:'Inter',ui-sans-serif,system-ui,sans-serif;
+    font-family: 'Zalando Sans Expanded', 'Inter', sans-serif;
     font-size:clamp(43px,4.2vw,70px);
     font-weight:800;
     line-height:1.06;
