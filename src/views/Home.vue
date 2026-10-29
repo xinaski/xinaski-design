@@ -16,14 +16,14 @@ const capabilities = [
     ['Photoshop','/skills/adobe-photoshop.svg'], ['Illustrator','/skills/adobe-illustrator.svg'], ['InDesign','/skills/adobe-indesign.svg'],
     ['Premiere Pro','premierepro/premierepro-original.svg'], ['XD','/skills/adobe-xd.svg'], ['InVision','/skills/invision-icon.svg']
   ] },
-  { title: '02 / VISUAL DESIGN', detail: 'Art direction · Identity · Editorial · Digital', icons: [] },
-  { title: '03 / FRONTEND', detail: 'Vue · HTML · CSS · JavaScript · WordPress', icons: [
+  { title: '02 / FRONTEND', detail: 'Vue · HTML · CSS · JavaScript · WordPress', icons: [
     ['HTML5','html5/html5-original.svg'], ['CSS3','css3/css3-original.svg'], ['JavaScript','javascript/javascript-original.svg'],
     ['jQuery','jquery/jquery-original.svg'], ['Ruby','ruby/ruby-original.svg'], ['Angular','angular/angular-original.svg'],
     ['Vue','vuejs/vuejs-original.svg'], ['Tailwind CSS','tailwindcss/tailwindcss-original.svg'], ['Bootstrap','bootstrap/bootstrap-original.svg'],
-    ['WordPress','/skills/wordpress-icon-alt.svg'], ['Shopify','shopify/shopify-original.svg'],
+    ['WordPress','/skills/wordpress-icon-alt.svg'],
     ['Sass','sass/sass-original.svg'], ['Less','less/less-plain-wordmark.svg']
-  ] }
+  ] },
+  { title: '03 / VISUAL DESIGN', detail: 'Art direction · Identity · Editorial · Digital', icons: [] }
 ];
 </script>
 
