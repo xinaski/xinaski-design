@@ -319,3 +319,25 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
  .about-section .about-copy h2 { font-size:clamp(36px,8.7vw,55px); }
  .about-section .about-details { grid-column:1; }
 }
+
+
+/* About alignment per approved reference: tighter portrait/title and wider copy. */
+.about-section .about-grid {
+  grid-template-columns:minmax(0,.68fr) minmax(0,1.32fr);
+  column-gap:clamp(12px,2vw,32px);
+  row-gap:clamp(32px,4vw,58px);
+}
+.about-section .about-visual { justify-content:flex-end; }
+.about-section .about-visual img { max-height:350px; width:100%; object-position:right center; }
+.about-section .about-details { width:min(100%,1000px); max-width:1000px; }
+.about-section .about-details .about-description { max-width:100%; font-size:clamp(15px,1.25vw,18px); line-height:1.75; }
+.about-section .about-details .about-actions { max-width:100%; }
+@media(max-width:900px) and (min-width:641px) {
+ .about-section .about-grid { grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr); column-gap:18px; }
+}
+@media(max-width:640px) {
+ .about-section .about-grid { grid-template-columns:1fr; row-gap:28px; }
+ .about-section .about-visual { justify-content:center; }
+ .about-section .about-visual img { max-height:310px; object-position:center; }
+ .about-section .about-details { width:100%; }
+}
