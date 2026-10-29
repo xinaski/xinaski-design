@@ -58,7 +58,7 @@ const capabilities = [
 
       <section id="portfolio" class="editorial-section work-section">
         <div class="section-heading"><span>02 / {{ t('navbar.portfolio-title') }}</span><span>SELECTED VISUAL WORK</span></div>
-        <div class="work-intro"><h2>MADE TO<br><span class="type-accent">BE SEEN.</span></h2><p>Design is not decoration.<br>It's how ideas take shape.</p></div>
+        <div class="work-intro"><h2>Made to<br><span class="type-accent">be seen.</span></h2><p>Design is not decoration.<br>It's how ideas take shape.</p></div>
         <div class="work-grid">
           <figure v-for="(img, i) in portfolioImages" :key="img" class="work-item" :class="'work-item-' + i">
             <div class="work-image"><img :src="'/portfolio/' + img" :alt="'Portfolio visual ' + (i + 1)" loading="lazy"></div>
