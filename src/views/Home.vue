@@ -12,12 +12,12 @@ const translatedCustomers = computed(() => customers.value.map(c => ({...c, desc
 const portfolioImages = ['portfolio08.png','portfolio02.png','portfolio03.png','portfolio04.png','portfolio05.png','portfolio01.png'];
 const capabilities = [
   { title: '01 / UX & PRODUCT', detail: 'Research · Strategy · Prototyping · Design systems', icons: [
-    ['Figma','figma/figma-original.svg'], ['Affinity Designer','/skills/affinity.png'], ['Sketch','sketch/sketch-original.svg'], ['Ant Design','/skills/ant-design.svg'],
+    ['Figma','figma/figma-original.svg'], ['Affinity Designer','/skills/affinity.png'], ['Sketch','sketch/sketch-original.svg'],
     ['Photoshop','/skills/adobe-photoshop.svg'], ['Illustrator','/skills/adobe-illustrator.svg'], ['InDesign','/skills/adobe-indesign.svg'],
     ['Premiere Pro','premierepro/premierepro-original.svg'], ['XD','/skills/adobe-xd.svg'], ['InVision','/skills/invision-icon.svg']
   ] },
   { title: '02 / FRONTEND', detail: 'Vue · HTML · CSS · JavaScript · WordPress', icons: [
-    ['HTML5','html5/html5-original.svg'], ['CSS3','css3/css3-original.svg'], ['JavaScript','javascript/javascript-original.svg'],
+    ['Ant Design','/skills/ant-design.svg'], ['HTML5','html5/html5-original.svg'], ['CSS3','css3/css3-original.svg'], ['JavaScript','javascript/javascript-original.svg'],
     ['jQuery','jquery/jquery-original.svg'], ['Ruby','ruby/ruby-original.svg'], ['Angular','angular/angular-original.svg'],
     ['Vue','vuejs/vuejs-original.svg'], ['Tailwind CSS','tailwindcss/tailwindcss-original.svg'], ['Bootstrap','bootstrap/bootstrap-original.svg'],
     ['WordPress','/skills/wordpress-icon-alt.svg'],
