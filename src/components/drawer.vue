@@ -10,7 +10,7 @@ const links = [
   { id: 'home', label: 'navbar.home-title' },
   { id: 'about', label: 'navbar.about-title' },
   { id: 'portfolio', label: 'navbar.portfolio-title' },
-  { id: 'personal-projects', label: 'Personal projects', literal: true },
+  { id: 'personal-projects', label: 'navbar.personal-title' },
   { id: 'customers', label: 'navbar.customers-title' },
   { id: 'skills', label: 'navbar.skills-title' }
 ];
@@ -35,7 +35,7 @@ onUnmounted(() => { window.removeEventListener('keydown', onKeydown); document.b
   <button class="menu-trigger" :class="{ 'is-active': isOpen }" type="button"
     :aria-expanded="isOpen" aria-controls="fullscreen-navigation"
     :aria-label="isOpen ? 'Close menu' : 'Open menu'" @click="isOpen = !isOpen">
-    <span class="menu-trigger-label">{{ isOpen ? 'Close' : 'Menu' }}</span>
+    <span class="menu-trigger-label">{{ isOpen ? t('editorial.menuClose') : t('editorial.menuOpen') }}</span>
     <span class="menu-trigger-lines"><i></i><i></i></span>
   </button>
 
@@ -45,7 +45,7 @@ onUnmounted(() => { window.removeEventListener('keydown', onKeydown); document.b
       <nav class="fullscreen-nav-links" aria-label="Sections">
         <button v-for="(link, index) in links" :key="link.id" type="button" @click="navigate(link.id)">
           <span class="nav-index">0{{ index + 1 }}</span>
-          <span class="nav-name">{{ link.literal ? link.label : t(link.label) }}</span>
+          <span class="nav-name">{{ t(link.label) }}</span>
           <span class="nav-arrow" aria-hidden="true">↗</span>
         </button>
       </nav>
@@ -54,7 +54,7 @@ onUnmounted(() => { window.removeEventListener('keydown', onKeydown); document.b
           <button v-for="lang in ['ca', 'es', 'en']" :key="lang" type="button" :class="{ selected: locale === lang }"
             :aria-pressed="locale === lang" @click="changeLanguage(lang)">{{ lang.toUpperCase() }}</button>
         </div>
-        <a href="mailto:xinasking@gmail.com">LET'S TALK ↗</a>
+        <a href="mailto:xinasking@gmail.com">{{ t('editorial.talk') }} ↗</a>
       </div>
     </div>
   </Transition>
