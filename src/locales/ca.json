@@ -105,6 +105,8 @@
       "Direcció d'art · Identitat · Editorial · Digital"
     ],
     "made": "FET PER",
-    "rights": "Tots els drets reservats."
+    "rights": "Tots els drets reservats.",
+    "menuOpen": "Menú",
+    "menuClose": "Tanca"
   }
 }
