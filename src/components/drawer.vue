@@ -10,6 +10,7 @@ const links = [
   { id: 'home', label: 'navbar.home-title' },
   { id: 'about', label: 'navbar.about-title' },
   { id: 'portfolio', label: 'navbar.portfolio-title' },
+  { id: 'personal-projects', label: 'Personal projects', literal: true },
   { id: 'customers', label: 'navbar.customers-title' },
   { id: 'skills', label: 'navbar.skills-title' }
 ];
@@ -44,7 +45,7 @@ onUnmounted(() => { window.removeEventListener('keydown', onKeydown); document.b
       <nav class="fullscreen-nav-links" aria-label="Sections">
         <button v-for="(link, index) in links" :key="link.id" type="button" @click="navigate(link.id)">
           <span class="nav-index">0{{ index + 1 }}</span>
-          <span class="nav-name">{{ t(link.label) }}</span>
+          <span class="nav-name">{{ link.literal ? link.label : t(link.label) }}</span>
           <span class="nav-arrow" aria-hidden="true">↗</span>
         </button>
       </nav>
