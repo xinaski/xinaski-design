@@ -451,11 +451,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .footer-credit img { width:100px; }
 }
 
-/* Mobile hero — bold, nearly full-width headline */
+/* Mobile hero — full-impact Inter headline */
 @media (max-width:640px) {
   .hero-type-composition h1 {
-    font-size: clamp(48px, 13vw, 72px);
-    line-height: .91;
-    letter-spacing: -.075em;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(54px, 15vw, 86px);
+    line-height: .88;
+    letter-spacing: -.085em;
   }
 }
