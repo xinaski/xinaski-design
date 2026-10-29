@@ -265,3 +265,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
  .about-details { grid-column:1; margin-top:14px; }
  .about-details .about-description { font-size:16px; line-height:1.8; gap:24px; }
 }
+
+
+/* About fine-tuning: less empty space above and more breathing room in copy */
+.about-section { padding-top:clamp(50px,7vw,105px); }
+.about-grid { row-gap:clamp(72px,8vw,115px); }
+.about-details .about-description { gap:32px; max-width:760px; margin-inline:auto; }
+.about-details .about-actions { max-width:760px; margin:48px auto 0; }
+@media(max-width:640px) {
+ .about-section { padding-top:48px; }
+ .about-grid { row-gap:42px; }
+ .about-details .about-description { gap:26px; }
+}
