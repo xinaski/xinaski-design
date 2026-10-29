@@ -421,3 +421,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 }
 @media(max-width:800px) { .personal-grid { grid-template-columns:1fr; gap:40px; } .personal-art { aspect-ratio:16/9; } .personal-art strong { font-size:clamp(35px,7vw,62px); } }
 @media(max-width:640px) { .personal-section > h2 { margin-bottom:42px; } .personal-art { padding:18px; } }
+
+
+/* Original SVG marks centered inside the personal project cards */
+.personal-art { position:relative; }
+.personal-logo { display:block; width:76%; height:52%; max-width:320px; object-fit:contain; align-self:center; flex:0 1 auto; }
+.personal-art--diumenge .personal-logo { width:78%; }
+.personal-art--soroll { background:#f1f0eb; color:#171717; }
+.personal-art--soroll .personal-logo { width:84%; }
+.personal-art--fora { background:#171717; color:#fff; }
+.personal-art--fora .personal-logo { width:70%; }
+@media(max-width:640px) { .personal-logo { max-width:280px; } }
