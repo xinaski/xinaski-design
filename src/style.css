@@ -450,3 +450,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .footer-credit { gap:12px; }
   .footer-credit img { width:100px; }
 }
+
+/* Mobile hero — bold, nearly full-width headline */
+@media (max-width:640px) {
+  .hero-type-composition h1 {
+    font-size: clamp(48px, 13vw, 72px);
+    line-height: .91;
+    letter-spacing: -.075em;
+  }
+}
