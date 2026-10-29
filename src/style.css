@@ -272,6 +272,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   max-height:350px;
   object-fit:contain;
   filter:none;
+  mix-blend-mode:multiply;
 }
 .about-section .about-copy { align-self:center; justify-self:start; }
 .about-section .about-copy h2 {
