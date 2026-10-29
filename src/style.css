@@ -246,7 +246,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 
 
 /* About — single authoritative layout, based on the approved screenshot */
-.editorial-section.about-section { padding:56px 0 130px; }
+.editorial-section.about-section { padding:106px 0 180px; }
 .about-section .section-heading { margin-bottom:52px; }
 .about-section .about-grid {
   display:grid;
