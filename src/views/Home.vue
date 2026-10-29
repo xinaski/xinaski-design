@@ -28,7 +28,7 @@ const capabilities = [
         </div>
         <p class="hero-specialties">UX/UI · Product Design · Frontend Development</p>
         <div class="hero-bottom hero-bottom-e">
-          <div class="hero-intro"><span class="hero-rule"></span><p>{{ t('home.description') }}</p><a href="#portfolio" class="hero-project-link"><span>⟶</span> VEURE PROJECTES</a></div>
+          <div class="hero-intro"><span class="hero-rule"></span><a href="#portfolio" class="hero-project-link"><span>⟶</span> VEURE PROJECTES</a></div>
         </div>
       </div>
       <div class="hero-footerline hero-services"><div><b>01</b><strong>Producte</strong><span>Idees, disseny i estratègia<br>per a productes digitals.</span></div><div><b>02</b><strong>Disseny visual</strong><span>Identitat, interfícies<br>i sistemes gràfics.</span></div><div><b>03</b><strong>Frontend</strong><span>Desenvolupament modern<br>i rendiment real.</span></div></div>
