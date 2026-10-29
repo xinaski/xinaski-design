@@ -393,3 +393,31 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .capability-icons { gap:12px 15px; margin-top:22px; }
   .capability-icons img { width:34px; height:34px; }
 }
+
+
+/* Personal projects — editorial cards, each linking directly to its own website */
+.personal-section > h2 { margin:0 0 64px; }
+.personal-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.personal-card { display:block; color:inherit; text-decoration:none; min-width:0; }
+.personal-art { aspect-ratio:4/3; padding:20px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; transition:transform .25s ease; }
+.personal-card:hover .personal-art { transform:translateY(-5px); }
+.personal-art-index { font-size:10px; letter-spacing:.13em; font-weight:800; }
+.personal-art strong { font-family:Inter,Arial,sans-serif; font-size:clamp(24px,3vw,49px); font-weight:900; line-height:.98; letter-spacing:-.075em; overflow-wrap:anywhere; }
+.personal-art-arrow { align-self:flex-end; font-size:26px; line-height:1; }
+.personal-art--diumenge { background:#e8e5dc; color:#171717; }
+.personal-art--soroll { background:#161616; color:#f3f0e8; }
+.personal-art--soroll strong { color:#f3e145; }
+.personal-art--fora { background:#d7e52d; color:#151515; }
+.personal-card-info { padding:22px 0 8px; }
+.personal-card-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.personal-card-heading h3 { font-family:Inter,Arial,sans-serif; font-size:clamp(18px,1.7vw,24px); font-weight:800; letter-spacing:-.04em; margin:0; }
+.personal-card-heading span { font-size:20px; }
+.personal-card-info p { margin:12px 0 0; max-width:320px; font-size:14px; line-height:1.6; }
+@media(min-width:641px) {
+  .editorial-section.personal-section { padding-top:106px; padding-bottom:180px; }
+  .personal-section .section-heading { margin-bottom:100px; }
+  .personal-section > h2 { font-family:Inter,ui-sans-serif,system-ui,sans-serif; font-size:clamp(43px,4.2vw,70px); font-weight:800; line-height:1.06; letter-spacing:-.055em; }
+  .personal-section > h2 .type-accent { font:inherit; letter-spacing:inherit; }
+}
+@media(max-width:800px) { .personal-grid { grid-template-columns:1fr; gap:40px; } .personal-art { aspect-ratio:16/9; } .personal-art strong { font-size:clamp(35px,7vw,62px); } }
+@media(max-width:640px) { .personal-section > h2 { margin-bottom:42px; } .personal-art { padding:18px; } }
