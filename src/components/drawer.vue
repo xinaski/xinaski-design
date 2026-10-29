@@ -24,7 +24,11 @@ function navigate(id) {
     history.replaceState(null, '', '#' + id);
   }
 }
-function changeLanguage(lang) { locale.value = lang; }
+function changeLanguage(lang) {
+  locale.value = lang;
+  document.documentElement.lang = lang;
+  try { localStorage.setItem('xinaski-language', lang); } catch { /* Storage may be unavailable */ }
+}
 function onKeydown(event) { if (event.key === 'Escape') closeMenu(); }
 watch(isOpen, value => { document.body.classList.toggle('menu-open', value); });
 onMounted(() => window.addEventListener('keydown', onKeydown));
