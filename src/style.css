@@ -318,3 +318,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
   .about-section .about-details { grid-column:1; }
   .about-section .about-details .about-description { font-size:16px; line-height:1.75; }
 }
+
+
+/* Portfolio — align heading typography and desktop rhythm with About */
+@media (min-width:641px) {
+  .editorial-section.work-section { padding-top:106px; padding-bottom:180px; }
+  .work-section .section-heading { margin-bottom:100px; }
+  .work-section .work-intro h2 {
+    font-family:Inter,Arial,sans-serif;
+    font-size:clamp(40px,4.7vw,75px);
+    font-weight:850;
+    line-height:1.08;
+    letter-spacing:-.075em;
+  }
+  .work-section .work-intro h2 .type-accent { font:inherit; letter-spacing:inherit; }
+}
