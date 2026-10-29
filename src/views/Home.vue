@@ -69,7 +69,7 @@ const capabilities = [
 
       <section id="customers" class="editorial-section clients-section">
         <div class="section-heading"><span>03 / {{ t('navbar.customers-title') }}</span><span>PEOPLE & BRANDS</span></div>
-        <h2>GOOD WORK.<br><span class="type-accent">GOOD COMPANY.</span></h2>
+        <h2>Good work.<br><span class="type-accent">Good company.</span></h2>
         <div class="clients-list">
           <a v-for="(customer, i) in translatedCustomers" :key="customer.id || i" :href="customer.url || '#customers'" :target="customer.url ? '_blank' : undefined" :rel="customer.url ? 'noopener noreferrer' : undefined" class="client-row">
             <span class="client-index">{{ String(i + 1).padStart(2,'0') }}</span>
