@@ -45,8 +45,7 @@ const capabilities = [
           </div>
           <div class="about-details">
             <div class="about-description">
-              <p v-html="t('about.description01')"></p>
-              <p v-html="t('about.description02')"></p>
+              <p v-html="t('about.description01') + ' ' + t('about.description02')"></p>
               <p v-html="t('about.description03')"></p>
             </div>
             <div class="about-actions">
