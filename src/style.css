@@ -415,7 +415,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 @media(min-width:641px) {
   .editorial-section.personal-section { padding-top:106px; padding-bottom:180px; }
   .personal-section .section-heading { margin-bottom:100px; }
-  .personal-section > h2 { font-family:Inter,ui-sans-serif,system-ui,sans-serif; font-size:clamp(43px,4.2vw,70px); font-weight:800; line-height:1.06; letter-spacing:-.055em; }
+  .personal-section > h2 { font-family:'Zalando Sans Expanded','Inter',sans-serif; font-size:clamp(43px,4.2vw,70px); font-weight:800; line-height:1.06; letter-spacing:-.055em; }
   .personal-section > h2 .type-accent { font:inherit; letter-spacing:inherit; }
 }
 @media(max-width:800px) { .personal-grid { grid-template-columns:1fr; gap:40px; } .personal-art { aspect-ratio:16/9; } .personal-art strong { font-size:clamp(35px,7vw,62px); } }
