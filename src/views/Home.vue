@@ -12,16 +12,16 @@ const translatedCustomers = computed(() => customers.value.map(c => ({...c, desc
 const portfolioImages = ['portfolio08.png','portfolio02.png','portfolio03.png','portfolio04.png','portfolio05.png','portfolio01.png'];
 const capabilities = [
   { title: '01 / UX & PRODUCT', detail: 'Research · Strategy · Prototyping · Design systems', icons: [
-    ['Figma','figma/figma-original.svg'], ['Affinity Designer','affinitydesigner/affinitydesigner-original.svg'], ['Sketch','sketch/sketch-original.svg'],
-    ['Photoshop','photoshop/photoshop-original.svg'], ['Illustrator','illustrator/illustrator-original.svg'], ['InDesign','indesign/indesign-original.svg'],
-    ['Premiere Pro','premierepro/premierepro-original.svg'], ['XD','xd/xd-original.svg'], ['InVision','invision/invision-original.svg']
+    ['Figma','figma/figma-original.svg'], ['Affinity Designer','/skills/affinity.png'], ['Sketch','sketch/sketch-original.svg'], ['Ant Design','/skills/ant-design.svg'],
+    ['Photoshop','/skills/adobe-photoshop.svg'], ['Illustrator','/skills/adobe-illustrator.svg'], ['InDesign','/skills/adobe-indesign.svg'],
+    ['Premiere Pro','premierepro/premierepro-original.svg'], ['XD','/skills/adobe-xd.svg'], ['InVision','/skills/invision-icon.svg']
   ] },
   { title: '02 / VISUAL DESIGN', detail: 'Art direction · Identity · Editorial · Digital', icons: [] },
   { title: '03 / FRONTEND', detail: 'Vue · HTML · CSS · JavaScript · WordPress', icons: [
     ['HTML5','html5/html5-original.svg'], ['CSS3','css3/css3-original.svg'], ['JavaScript','javascript/javascript-original.svg'],
     ['jQuery','jquery/jquery-original.svg'], ['Ruby','ruby/ruby-original.svg'], ['Angular','angular/angular-original.svg'],
     ['Vue','vuejs/vuejs-original.svg'], ['Tailwind CSS','tailwindcss/tailwindcss-original.svg'], ['Bootstrap','bootstrap/bootstrap-original.svg'],
-    ['WordPress','wordpress/wordpress-original.svg'], ['Shopify','shopify/shopify-original.svg'],
+    ['WordPress','/skills/wordpress-icon-alt.svg'], ['Shopify','shopify/shopify-original.svg'],
     ['Sass','sass/sass-original.svg'], ['Less','less/less-plain-wordmark.svg']
   ] }
 ];
@@ -99,7 +99,7 @@ const capabilities = [
             <h3>{{ cap.title }}</h3>
             <p>{{ cap.detail }}</p>
             <div v-if="cap.icons.length" class="capability-icons">
-              <img v-for="icon in cap.icons" :key="icon[0]" :src="'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + icon[1]" :alt="icon[0]" :title="icon[0]" loading="lazy">
+              <img v-for="icon in cap.icons" :key="icon[0]" :src="icon[1].startsWith('/') ? icon[1] : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + icon[1]" :alt="icon[0]" :title="icon[0]" loading="lazy">
             </div>
           </div>
         </div>
