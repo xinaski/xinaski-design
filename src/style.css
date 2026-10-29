@@ -242,3 +242,26 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 @media (max-width:640px) {
   .about-copy h2 { font-size:clamp(34px,8.4vw,48px); line-height:1.08; margin-bottom:26px; }
 }
+
+
+/* About layout: generous portrait + heading, with full-width copy below. */
+.about-section { padding-top:clamp(90px,12vw,190px); padding-bottom:clamp(100px,13vw,200px); }
+.about-grid { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); column-gap:clamp(44px,7vw,130px); row-gap:clamp(70px,9vw,140px); align-items:center; }
+.about-visual { background:transparent; min-height:0; overflow:visible; display:block; }
+.about-visual img { display:block; width:100%; height:auto; max-height:none; object-fit:contain; }
+.about-copy { align-self:center; }
+.about-copy h2 { max-width:12ch; margin:28px 0 0; font-size:clamp(42px,4.7vw,80px); line-height:1.07; }
+.about-details { grid-column:1 / -1; width:min(100%,920px); margin-inline:auto; }
+.about-details .about-description { max-width:100%; font-size:clamp(17px,1.45vw,20px); line-height:1.85; gap:28px; }
+.about-details .about-actions { margin-top:48px; }
+@media(max-width:900px) {
+ .about-grid { grid-template-columns:1fr 1fr; column-gap:32px; row-gap:70px; }
+ .about-copy h2 { font-size:clamp(35px,5.2vw,54px); }
+}
+@media(max-width:640px) {
+ .about-grid { grid-template-columns:1fr; row-gap:38px; }
+ .about-visual { width:100%; }
+ .about-copy h2 { font-size:clamp(39px,9vw,62px); }
+ .about-details { grid-column:1; margin-top:14px; }
+ .about-details .about-description { font-size:16px; line-height:1.8; gap:24px; }
+}
