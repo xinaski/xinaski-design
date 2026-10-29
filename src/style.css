@@ -172,3 +172,34 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
  .editorial-section h2 { font-size:clamp(30px,7vw,49px); }
  .hero-services strong { font-size:11px; }
 }
+
+
+/* Restore the original Xinaski headline family from main: Inter ExtraBold.
+   The original headline uses font-sans, font-extrabold and extra-expanded styling. */
+.hero-type-composition h1,
+.editorial-section h2,
+.hero-services strong,
+.client-name,
+.capability h3 {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  font-stretch: extra-expanded;
+  font-optical-sizing: auto;
+}
+.hero-type-composition h1 {
+  font-size: clamp(56px, 9.1vw, 180px);
+  line-height: .91;
+  letter-spacing: -.067em;
+}
+.editorial-section h2 {
+  font-size: clamp(49px, 7.6vw, 125px);
+  line-height: .98;
+  letter-spacing: -.067em;
+}
+@media (max-width:900px) {
+ .hero-type-composition h1 { font-size:clamp(49px,8.5vw,110px); }
+}
+@media (max-width:640px) {
+ .hero-type-composition h1 { font-size:clamp(39px,9.1vw,66px); line-height:.98; }
+ .editorial-section h2 { font-size:clamp(39px,9vw,65px); }
+}
