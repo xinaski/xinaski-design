@@ -10,8 +10,19 @@ import ca from './locales/ca.json'; // Catala
 import es from './locales/es.json'; // Spanish
 import en from './locales/en.json'; // English
 
+const supportedLocales = ['ca', 'es', 'en'];
+const normalizeLocale = language => language?.toLowerCase().split('-')[0];
+let savedLocale;
+try { savedLocale = localStorage.getItem('xinaski-language'); } catch { /* Storage may be unavailable */ }
+const browserLocale = (navigator.languages || [navigator.language])
+  .map(normalizeLocale)
+  .find(language => supportedLocales.includes(language));
+const initialLocale = supportedLocales.includes(savedLocale) ? savedLocale : (browserLocale || 'en');
+
+document.documentElement.lang = initialLocale;
+
 const i18n = createI18n({
-  locale: 'en', // Default language
+  locale: initialLocale,
   messages: {
     ca: ca,
     es: es,
