@@ -432,3 +432,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 .personal-art--fora { background:#171717; color:#fff; }
 .personal-art--fora .personal-logo { width:70%; }
 @media(max-width:640px) { .personal-logo { max-width:280px; } }
+
+/* Slightly smaller Fora de màquina logo for more breathing room */
+.personal-art--fora .personal-logo { width:58%; }
