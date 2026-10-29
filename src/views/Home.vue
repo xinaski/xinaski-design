@@ -11,9 +11,19 @@ onMounted(async () => {
 const translatedCustomers = computed(() => customers.value.map(c => ({...c, description: c.description?.[locale.value] || c.description?.en || ''})));
 const portfolioImages = ['portfolio08.png','portfolio02.png','portfolio03.png','portfolio04.png','portfolio05.png','portfolio01.png'];
 const capabilities = [
-  { title: '01 / UX & PRODUCT', detail: 'Research · Strategy · Prototyping · Design systems' },
-  { title: '02 / VISUAL DESIGN', detail: 'Art direction · Identity · Editorial · Digital' },
-  { title: '03 / FRONTEND', detail: 'Vue · HTML · CSS · JavaScript · WordPress' }
+  { title: '01 / UX & PRODUCT', detail: 'Research · Strategy · Prototyping · Design systems', icons: [
+    ['Figma','figma/figma-original.svg'], ['Affinity Designer','affinitydesigner/affinitydesigner-original.svg'], ['Sketch','sketch/sketch-original.svg'],
+    ['Photoshop','photoshop/photoshop-original.svg'], ['Illustrator','illustrator/illustrator-original.svg'], ['InDesign','indesign/indesign-original.svg'],
+    ['Premiere Pro','premierepro/premierepro-original.svg'], ['XD','xd/xd-original.svg'], ['InVision','invision/invision-original.svg']
+  ] },
+  { title: '02 / VISUAL DESIGN', detail: 'Art direction · Identity · Editorial · Digital', icons: [] },
+  { title: '03 / FRONTEND', detail: 'Vue · HTML · CSS · JavaScript · WordPress', icons: [
+    ['HTML5','html5/html5-original.svg'], ['CSS3','css3/css3-original.svg'], ['JavaScript','javascript/javascript-original.svg'],
+    ['jQuery','jquery/jquery-original.svg'], ['Ruby','ruby/ruby-original.svg'], ['Angular','angular/angular-original.svg'],
+    ['Vue','vuejs/vuejs-original.svg'], ['Tailwind CSS','tailwindcss/tailwindcss-original.svg'], ['Bootstrap','bootstrap/bootstrap-original.svg'],
+    ['WordPress','wordpress/wordpress-original.svg'], ['Shopify','shopify/shopify-original.svg'],
+    ['Sass','sass/sass-original.svg'], ['Less','less/less-plain-wordmark.svg']
+  ] }
 ];
 </script>
 
@@ -85,39 +95,11 @@ const capabilities = [
         <div class="section-heading"><span>04 / {{ t('navbar.skills-title') }}</span><span>WHAT I BRING TO THE TABLE</span></div>
         <div class="expertise-intro"><h2>Ideas.<br>Tools.<br><span class="type-accent">Instinct.</span></h2><p>From the first sketch to the last line of code.</p></div>
         <div class="capability-list">
-          <div v-for="cap in capabilities" :key="cap.title" class="capability"><h3>{{ cap.title }}</h3><p>{{ cap.detail }}</p><span>↗</span></div>
-        </div>
-        <div class="tech-stack" aria-label="Eines de disseny i tecnologies">
-          <div class="tech-group">
-            <h3>Design Tools</h3>
-            <div class="tech-stack-icons">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" title="Figma" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/affinitydesigner/affinitydesigner-original.svg" alt="Affinity Designer" title="Affinity Designer" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg" alt="Sketch" title="Sketch" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop" title="Photoshop" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" alt="Illustrator" title="Illustrator" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/indesign/indesign-original.svg" alt="InDesign" title="InDesign" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" alt="Premiere Pro" title="Premiere Pro" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg" alt="XD" title="XD" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/invision/invision-original.svg" alt="InVision" title="InVision" loading="lazy">
-            </div>
-          </div>
-          <div class="tech-group">
-            <h3>Frontend Development</h3>
-            <div class="tech-stack-icons">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" alt="jQuery" title="jQuery" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" alt="Ruby" title="Ruby" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="Angular" title="Angular" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue" title="Vue" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" title="Bootstrap" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg" alt="WordPress" title="WordPress" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/shopify/shopify-original.svg" alt="Shopify" title="Shopify" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="Sass" title="Sass" loading="lazy">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/less/less-plain-wordmark.svg" alt="Less" title="Less" loading="lazy">
+          <div v-for="cap in capabilities" :key="cap.title" class="capability">
+            <h3>{{ cap.title }}</h3>
+            <p>{{ cap.detail }}</p>
+            <div v-if="cap.icons.length" class="capability-icons">
+              <img v-for="icon in cap.icons" :key="icon[0]" :src="'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + icon[1]" :alt="icon[0]" :title="icon[0]" loading="lazy">
             </div>
           </div>
         </div>
