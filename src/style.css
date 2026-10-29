@@ -207,3 +207,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 /* Minimal hero revision: remove decorative yellow disc and period shadow */
 .hero-yellow-disc { display: none; }
 .hero-period { text-shadow: none; }
+
+
+/* Fluid, nearly full-width hero lettering; retain safe side gutters. */
+.hero-type-composition { width:100%; }
+.hero-type-composition h1 {
+  font-size: clamp(60px, 11.3vw, 220px);
+  line-height: .88;
+  letter-spacing: -.075em;
+  max-width:100%;
+}
+@media (max-width:900px) {
+  .hero-type-composition h1 { font-size:clamp(48px,10.5vw,115px); }
+}
+@media (max-width:640px) {
+  .hero-type-composition h1 { font-size:clamp(36px,10.2vw,66px); line-height:.94; }
+}
