@@ -136,3 +136,39 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 @media(max-width:900px) { .hero-type-composition h1 { font-size:clamp(59px,10vw,115px); } .hero-yellow-disc { right:-10px; top:14%; width:32vw; } }
 @media(max-width:640px) { .editorial-hero { min-height:100svh; } .hero-center { padding:85px 0 40px; } .hero-type-composition h1 { font-size:clamp(43px,10.3vw,70px); letter-spacing:-.085em; } .hero-yellow-disc { width:37vw; right:-10px; top:17%; } .hero-specialties { font-size:13px; line-height:1.4; margin-top:24px; } .hero-services { gap:12px; } .hero-services div { padding:0 8px; font-size:10px; } .hero-services b { font-size:17px; } .hero-services strong { font-size:13px; } .hero-intro p { font-size:14px; } }
 @media(prefers-reduced-motion:reduce) { .hero-yellow-disc { animation:none; } }
+
+
+/* Typography correction: concept E / wide geometric Unbounded */
+.xinaski-page { font-family: 'Manrope', Arial, sans-serif; }
+.hero-type-composition h1,
+.editorial-section h2,
+.hero-services strong,
+.client-name,
+.capability h3 {
+  font-family: 'Unbounded', 'Manrope', sans-serif;
+  font-weight: 800;
+  font-optical-sizing: auto;
+}
+.hero-type-composition h1 {
+  font-size: clamp(50px, 8.35vw, 155px);
+  line-height: 1.06;
+  letter-spacing: -.075em;
+}
+.editorial-section h2 {
+  font-size: clamp(44px, 6.1vw, 105px);
+  line-height: 1.1;
+  letter-spacing: -.07em;
+}
+.editorial-section h2 .type-accent { font-family:inherit; font-weight:inherit; }
+.hero-services strong { font-size:clamp(14px,1.35vw,22px); letter-spacing:-.045em; }
+.client-name { font-size:clamp(17px,2vw,30px); letter-spacing:-.045em; }
+.capability h3 { font-size:clamp(17px,2vw,28px); letter-spacing:-.045em; }
+@media(max-width:900px) {
+ .hero-type-composition h1 { font-size:clamp(43px,7.6vw,85px); }
+ .editorial-section h2 { font-size:clamp(40px,6vw,75px); }
+}
+@media(max-width:640px) {
+ .hero-type-composition h1 { font-size:clamp(30px,7.2vw,52px); line-height:1.14; letter-spacing:-.07em; }
+ .editorial-section h2 { font-size:clamp(30px,7vw,49px); }
+ .hero-services strong { font-size:11px; }
+}
