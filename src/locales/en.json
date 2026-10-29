@@ -9,7 +9,8 @@
     "customers-title": "Clients",
     "customers-subtitle": "Who have I worked for?",
     "skills-title": "Skills",
-    "skills-subtitle": "What have I used?"
+    "skills-subtitle": "What have I used?",
+    "personal-title": "Personal projects"
   },
   "home": {
     "welcome": "I make <span class='text-yellow-300'>awesome</span> designs",
@@ -38,5 +39,72 @@
   "contact": {
     "title": "Contacte",
     "description": "Si vols posar-te en contacte amb mi, omple el formulari."
+  },
+  "editorial": {
+    "nav": "Personal projects",
+    "heroTop": "INDEPENDENT DESIGNER / DEVELOPER",
+    "heroTitle": [
+      "Design",
+      "with",
+      "character"
+    ],
+    "view": "VIEW PROJECTS",
+    "services": [
+      "Product",
+      "Ideas, design and strategy<br>for digital products.",
+      "Visual design",
+      "Identity, interfaces<br>and graphic systems.",
+      "Frontend",
+      "Modern development<br>and real performance."
+    ],
+    "aboutK": "THE PERSON BEHIND THE PIXELS",
+    "hello": "HELLO, I'M MARC.",
+    "aboutTitle": [
+      "Good design",
+      "is never",
+      "an accident."
+    ],
+    "talk": "LET'S TALK",
+    "cv": "DOWNLOAD CV",
+    "selected": "SELECTED VISUAL WORK",
+    "workTitle": [
+      "Made to",
+      "be seen."
+    ],
+    "workDesc": [
+      "Design is not decoration.",
+      "It's how ideas take shape."
+    ],
+    "selectedWork": "SELECTED WORK",
+    "personal": "PERSONAL PROJECTS",
+    "beyond": "BEYOND THE CLIENT BRIEF",
+    "personalTitle": [
+      "Beyond",
+      "the brief."
+    ],
+    "descs": [
+      "A personal space for photography, writing and everything in between.",
+      "Music, stories and playlists with a life of their own.",
+      "Functional training, without machines or unnecessary complications."
+    ],
+    "people": "PEOPLE & BRANDS",
+    "clientsTitle": [
+      "Good work.",
+      "Good company."
+    ],
+    "skillsK": "WHAT I BRING TO THE TABLE",
+    "skillsTitle": [
+      "Ideas.",
+      "Tools.",
+      "Instinct."
+    ],
+    "skillsDesc": "From the first sketch to the last line of code.",
+    "capDetails": [
+      "Research · Strategy · Prototyping · Design systems",
+      "Vue · HTML · CSS · JavaScript · WordPress",
+      "Art direction · Identity · Editorial · Digital"
+    ],
+    "made": "MADE BY",
+    "rights": "All rights reserved."
   }
 }
