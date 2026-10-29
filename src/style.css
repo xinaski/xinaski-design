@@ -181,9 +181,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 .hero-services strong,
 .client-name,
 .capability h3 {
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Zalando Sans Expanded', 'Inter', sans-serif;
   font-weight: 800;
-  font-stretch: extra-expanded;
   font-optical-sizing: auto;
 }
 .hero-type-composition h1 {
