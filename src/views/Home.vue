@@ -93,7 +93,7 @@ const capabilities = [
               <span class="personal-art-arrow" aria-hidden="true">↗</span>
             </div>
             <div class="personal-card-info">
-              <div class="personal-card-heading"><h3>{{ project.name }}</h3><span aria-hidden="true">↗</span></div>
+              <div class="personal-card-heading"><h3>{{ project.name }}</h3></div>
               <p>{{ project.description }}</p>
             </div>
           </a>
