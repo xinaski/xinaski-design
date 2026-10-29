@@ -277,3 +277,24 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
  .about-grid { row-gap:42px; }
  .about-details .about-description { gap:26px; }
 }
+
+
+/* About-specific overrides: beat generic .editorial-section h2 selectors. */
+.editorial-section.about-section { padding-top:56px; padding-bottom:140px; }
+.about-section .section-heading { margin-bottom:clamp(32px,4vw,64px); }
+.about-section .about-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:clamp(40px,6vw,100px); row-gap:clamp(75px,9vw,135px); }
+.about-section .about-copy h2 { font-size:clamp(42px,4.6vw,76px); line-height:1.08; letter-spacing:-.055em; max-width:12ch; }
+.about-section .about-details { max-width:900px; }
+.about-section .about-details .about-description { max-width:760px; margin:0 auto; gap:34px; font-size:clamp(17px,1.4vw,20px); line-height:1.85; }
+@media(max-width:900px) {
+ .about-section .about-grid { grid-template-columns:1fr 1fr; gap:60px 30px; }
+ .about-section .about-copy h2 { font-size:clamp(34px,5vw,53px); }
+}
+@media(max-width:640px) {
+ .editorial-section.about-section { padding-top:38px; padding-bottom:90px; }
+ .about-section .section-heading { margin-bottom:30px; }
+ .about-section .about-grid { grid-template-columns:1fr; gap:35px; }
+ .about-section .about-copy h2 { font-size:clamp(37px,8.7vw,56px); }
+ .about-section .about-details { grid-column:1; }
+ .about-section .about-details .about-description { font-size:16px; line-height:1.8; gap:25px; }
+}
