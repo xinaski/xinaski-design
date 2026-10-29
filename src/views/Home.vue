@@ -22,14 +22,16 @@ const capabilities = [
     <header id="home" class="editorial-hero">
       <div class="hero-topline"><span>INDEPENDENT DESIGNER / DEVELOPER</span><span>BARCELONA · CATALUNYA</span></div>
       <div class="hero-center">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> UX/UI · PRODUCT · FRONTEND</p>
-        <h1>DESIGN<span class="hero-star">✳</span><br>WITH<br><em>CHARACTER.</em></h1>
-        <div class="hero-bottom">
-          <p>{{ t('home.description') }}</p>
-          <a href="#about" class="round-arrow" aria-label="Scroll to about">↘</a>
+        <div class="hero-type-composition">
+          <span class="hero-yellow-disc" aria-hidden="true"></span>
+          <h1>Design<br>with<br>character<span class="hero-period">.</span></h1>
+        </div>
+        <p class="hero-specialties">UX/UI · Product Design · Frontend Development</p>
+        <div class="hero-bottom hero-bottom-e">
+          <div class="hero-intro"><span class="hero-rule"></span><p>{{ t('home.description') }}</p><a href="#portfolio" class="hero-project-link"><span>⟶</span> VEURE PROJECTES</a></div>
         </div>
       </div>
-      <div class="hero-footerline"><span>MARC ZAMORA © 2026</span><span>SCROLL TO EXPLORE ↓</span></div>
+      <div class="hero-footerline hero-services"><div><b>01</b><strong>Producte</strong><span>Idees, disseny i estratègia<br>per a productes digitals.</span></div><div><b>02</b><strong>Disseny visual</strong><span>Identitat, interfícies<br>i sistemes gràfics.</span></div><div><b>03</b><strong>Frontend</strong><span>Desenvolupament modern<br>i rendiment real.</span></div></div>
     </header>
 
     <main class="editorial-main">
@@ -39,7 +41,7 @@ const capabilities = [
           <div class="about-visual"><img src="/about/imgabout01.png" alt="Marc Zamora — portrait" loading="lazy"><span class="about-stamp">THINK.<br>MAKE.<br>REPEAT.</span></div>
           <div class="about-copy">
             <p class="eyebrow">HELLO, I'M MARC.</p>
-            <h2>Good design<br>is <em>never</em><br>an accident.</h2>
+            <h2>Good design<br>is <span class="type-accent">never</span><br>an accident.</h2>
             <div class="about-description">
               <p v-html="t('about.description01')"></p>
               <p v-html="t('about.description02')"></p>
@@ -55,7 +57,7 @@ const capabilities = [
 
       <section id="portfolio" class="editorial-section work-section">
         <div class="section-heading"><span>02 / {{ t('navbar.portfolio-title') }}</span><span>SELECTED VISUAL WORK</span></div>
-        <div class="work-intro"><h2>MADE TO<br><em>BE SEEN.</em></h2><p>Design is not decoration.<br>It's how ideas take shape.</p></div>
+        <div class="work-intro"><h2>MADE TO<br><span class="type-accent">BE SEEN.</span></h2><p>Design is not decoration.<br>It's how ideas take shape.</p></div>
         <div class="work-grid">
           <figure v-for="(img, i) in portfolioImages" :key="img" class="work-item" :class="'work-item-' + i">
             <div class="work-image"><img :src="'/portfolio/' + img" :alt="'Portfolio visual ' + (i + 1)" loading="lazy"></div>
@@ -66,7 +68,7 @@ const capabilities = [
 
       <section id="customers" class="editorial-section clients-section">
         <div class="section-heading"><span>03 / {{ t('navbar.customers-title') }}</span><span>PEOPLE & BRANDS</span></div>
-        <h2>GOOD WORK.<br><em>GOOD COMPANY.</em></h2>
+        <h2>GOOD WORK.<br><span class="type-accent">GOOD COMPANY.</span></h2>
         <div class="clients-list">
           <a v-for="(customer, i) in translatedCustomers" :key="customer.id || i" :href="customer.url || '#customers'" :target="customer.url ? '_blank' : undefined" :rel="customer.url ? 'noopener noreferrer' : undefined" class="client-row">
             <span class="client-index">{{ String(i + 1).padStart(2,'0') }}</span>
@@ -80,7 +82,7 @@ const capabilities = [
 
       <section id="skills" class="editorial-section expertise-section">
         <div class="section-heading"><span>04 / {{ t('navbar.skills-title') }}</span><span>WHAT I BRING TO THE TABLE</span></div>
-        <div class="expertise-intro"><h2>IDEAS.<br>TOOLS.<br><em>INSTINCT.</em></h2><p>From the first sketch to the last line of code.</p></div>
+        <div class="expertise-intro"><h2>IDEAS.<br>TOOLS.<br><span class="type-accent">INSTINCT.</span></h2><p>From the first sketch to the last line of code.</p></div>
         <div class="capability-list">
           <div v-for="cap in capabilities" :key="cap.title" class="capability"><h3>{{ cap.title }}</h3><p>{{ cap.detail }}</p><span>↗</span></div>
         </div>
