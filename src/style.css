@@ -435,3 +435,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 
 /* Slightly smaller Fora de màquina logo for more breathing room */
 .personal-art--fora .personal-logo { width:58%; }
+
+
+/* Footer — full width of the editorial content area */
+.editorial-footer { width:100%; max-width:none; margin:0; border-top:1px solid var(--ink); padding:28px 0 36px; }
+.editorial-footer-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; width:100%; }
+.footer-copyright { margin:0; font-size:12px; font-weight:600; letter-spacing:.01em; }
+.footer-credit { display:inline-flex; align-items:center; justify-content:flex-end; gap:14px; text-decoration:none; color:var(--ink); }
+.footer-credit span { font-size:10px; font-weight:800; letter-spacing:.13em; white-space:nowrap; }
+.footer-credit img { display:block; width:112px; max-height:35px; height:auto; object-fit:contain; }
+@media(max-width:640px) {
+  .editorial-footer { padding:24px 0 30px; }
+  .editorial-footer-inner { align-items:flex-start; flex-direction:column; gap:20px; }
+  .footer-credit { gap:12px; }
+  .footer-credit img { width:100px; }
+}
