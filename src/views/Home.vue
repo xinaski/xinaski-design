@@ -38,10 +38,12 @@ const capabilities = [
       <section id="about" class="editorial-section about-section">
         <div class="section-heading"><span>01 / {{ t('navbar.about-title') }}</span><span>THE PERSON BEHIND THE PIXELS</span></div>
         <div class="about-grid">
-          <div class="about-visual"><img src="/about/imgabout01.png" alt="Marc Zamora — portrait" loading="lazy"><span class="about-stamp">THINK.<br>MAKE.<br>REPEAT.</span></div>
+          <div class="about-visual"><img src="/about/imgabout01.png" alt="Marc Zamora — portrait" loading="lazy"></div>
           <div class="about-copy">
             <p class="eyebrow">HELLO, I'M MARC.</p>
             <h2>Good design<br>is <span class="type-accent">never</span><br>an accident.</h2>
+          </div>
+          <div class="about-details">
             <div class="about-description">
               <p v-html="t('about.description01')"></p>
               <p v-html="t('about.description02')"></p>
