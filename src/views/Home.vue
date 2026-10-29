@@ -10,6 +10,11 @@ onMounted(async () => {
 });
 const translatedCustomers = computed(() => customers.value.map(c => ({...c, description: c.description?.[locale.value] || c.description?.en || ''})));
 const portfolioImages = ['portfolio08.png','portfolio02.png','portfolio03.png','portfolio04.png','portfolio05.png','portfolio01.png'];
+const personalProjects = [
+  { name: 'DIUMENGE', description: 'A personal space for photography, writing and everything in between.', url: 'https://diumenge.cat/', visual: 'diumenge', mark: 'DIUMENGE.' },
+  { name: 'Soroll de fons', description: 'Music, stories and playlists with a life of their own.', url: 'https://soroll-de-fons.xinaski.com/', visual: 'soroll', mark: 'SOROLL DE FONS.' },
+  { name: 'Fora de màquina', description: 'Functional training, without machines or unnecessary complications.', url: 'https://fora-de-maquina.vercel.app/', visual: 'fora', mark: 'FORA DE MÀQUINA.' }
+];
 const capabilities = [
   { title: '01 / UX & PRODUCT', detail: 'Research · Strategy · Prototyping · Design systems', icons: [
     ['Figma','figma/figma-original.svg'], ['Affinity Designer','/skills/affinity.png'], ['Sketch','sketch/sketch-original.svg'],
@@ -77,8 +82,26 @@ const capabilities = [
         </div>
       </section>
 
+      <section id="personal-projects" class="editorial-section personal-section">
+        <div class="section-heading"><span>03 / PERSONAL PROJECTS</span><span>BEYOND THE CLIENT BRIEF</span></div>
+        <h2>Beyond<br><span class="type-accent">the brief.</span></h2>
+        <div class="personal-grid">
+          <a v-for="(project, i) in personalProjects" :key="project.name" :href="project.url" target="_blank" rel="noopener noreferrer" class="personal-card">
+            <div class="personal-art" :class="'personal-art--' + project.visual">
+              <span class="personal-art-index">0{{ i + 1 }} / PERSONAL</span>
+              <strong>{{ project.mark }}</strong>
+              <span class="personal-art-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="personal-card-info">
+              <div class="personal-card-heading"><h3>{{ project.name }}</h3><span aria-hidden="true">↗</span></div>
+              <p>{{ project.description }}</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section id="customers" class="editorial-section clients-section">
-        <div class="section-heading"><span>03 / {{ t('navbar.customers-title') }}</span><span>PEOPLE & BRANDS</span></div>
+        <div class="section-heading"><span>04 / {{ t('navbar.customers-title') }}</span><span>PEOPLE & BRANDS</span></div>
         <h2>Good work.<br><span class="type-accent">Good company.</span></h2>
         <div class="clients-list">
           <a v-for="(customer, i) in translatedCustomers" :key="customer.id || i" :href="customer.url || '#customers'" :target="customer.url ? '_blank' : undefined" :rel="customer.url ? 'noopener noreferrer' : undefined" class="client-row">
@@ -92,7 +115,7 @@ const capabilities = [
       </section>
 
       <section id="skills" class="editorial-section expertise-section">
-        <div class="section-heading"><span>04 / {{ t('navbar.skills-title') }}</span><span>WHAT I BRING TO THE TABLE</span></div>
+        <div class="section-heading"><span>05 / {{ t('navbar.skills-title') }}</span><span>WHAT I BRING TO THE TABLE</span></div>
         <div class="expertise-intro"><h2>Ideas.<br>Tools.<br><span class="type-accent">Instinct.</span></h2><p>From the first sketch to the last line of code.</p></div>
         <div class="capability-list">
           <div v-for="cap in capabilities" :key="cap.title" class="capability">
