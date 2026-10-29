@@ -83,9 +83,24 @@ const capabilities = [
 
       <section id="skills" class="editorial-section expertise-section">
         <div class="section-heading"><span>04 / {{ t('navbar.skills-title') }}</span><span>WHAT I BRING TO THE TABLE</span></div>
-        <div class="expertise-intro"><h2>IDEAS.<br>TOOLS.<br><span class="type-accent">INSTINCT.</span></h2><p>From the first sketch to the last line of code.</p></div>
+        <div class="expertise-intro"><h2>Ideas.<br>Tools.<br><span class="type-accent">Instinct.</span></h2><p>From the first sketch to the last line of code.</p></div>
         <div class="capability-list">
           <div v-for="cap in capabilities" :key="cap.title" class="capability"><h3>{{ cap.title }}</h3><p>{{ cap.detail }}</p><span>↗</span></div>
+        </div>
+        <div class="tech-stack" aria-label="Tecnologies i eines">
+          <div class="tech-stack-icons">
+            <div v-for="tech in [
+              { name:'HTML5', icon:'html5/html5-original.svg' },
+              { name:'CSS3', icon:'css3/css3-original.svg' },
+              { name:'JavaScript', icon:'javascript/javascript-original.svg' },
+              { name:'Vue', icon:'vuejs/vuejs-original.svg' },
+              { name:'Angular', icon:'angular/angular-original.svg' },
+              { name:'WordPress', icon:'wordpress/wordpress-original.svg' }
+            ]" :key="tech.name" class="tech-stack-item">
+              <img :src="'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + tech.icon" :alt="tech.name" loading="lazy">
+              <span>{{ tech.name }}</span>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
